@@ -32,7 +32,6 @@
             this.AllCountries = new System.Windows.Forms.CheckBox();
             this.CountriesList = new System.Windows.Forms.CheckedListBox();
             this.MemberStatesVote = new System.Windows.Forms.ProgressBar();
-            this.progressBar2 = new System.Windows.Forms.ProgressBar();
             this.AusVote = new System.Windows.Forms.TrackBar();
             this.BelVote = new System.Windows.Forms.TrackBar();
             this.CroVote = new System.Windows.Forms.TrackBar();
@@ -66,6 +65,14 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.CountriesYes = new System.Windows.Forms.Label();
+            this.CountriesNo = new System.Windows.Forms.Label();
+            this.CountriesAbstain = new System.Windows.Forms.Label();
+            this.VoteYesNumber = new System.Windows.Forms.Label();
+            this.VoteNoNumber = new System.Windows.Forms.Label();
+            this.VoteAbstainNumber = new System.Windows.Forms.Label();
+            this.PassedFailed = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.AusVote)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BelVote)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CroVote)).BeginInit();
@@ -158,20 +165,13 @@
             // 
             // MemberStatesVote
             // 
-            this.MemberStatesVote.Location = new System.Drawing.Point(670, 166);
+            this.MemberStatesVote.Location = new System.Drawing.Point(670, 145);
             this.MemberStatesVote.MarqueeAnimationSpeed = 0;
             this.MemberStatesVote.Maximum = 27;
             this.MemberStatesVote.Name = "MemberStatesVote";
-            this.MemberStatesVote.Size = new System.Drawing.Size(100, 23);
+            this.MemberStatesVote.Size = new System.Drawing.Size(118, 23);
             this.MemberStatesVote.Style = System.Windows.Forms.ProgressBarStyle.Continuous;
             this.MemberStatesVote.TabIndex = 5;
-            // 
-            // progressBar2
-            // 
-            this.progressBar2.Location = new System.Drawing.Point(670, 198);
-            this.progressBar2.Name = "progressBar2";
-            this.progressBar2.Size = new System.Drawing.Size(100, 23);
-            this.progressBar2.TabIndex = 6;
             // 
             // AusVote
             // 
@@ -474,7 +474,7 @@
             // 
             this.CalculateButton.Location = new System.Drawing.Point(670, 103);
             this.CalculateButton.Name = "CalculateButton";
-            this.CalculateButton.Size = new System.Drawing.Size(75, 23);
+            this.CalculateButton.Size = new System.Drawing.Size(118, 23);
             this.CalculateButton.TabIndex = 34;
             this.CalculateButton.Text = "Calculate";
             this.CalculateButton.UseVisualStyleBackColor = true;
@@ -519,17 +519,105 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(334, 26);
+            this.label4.Location = new System.Drawing.Point(332, 26);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(25, 13);
             this.label4.TabIndex = 39;
             this.label4.Text = "Yes";
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "Qualified majority",
+            "Reinforced qualified majority",
+            "Simple Majority",
+            "Unanimity"});
+            this.comboBox1.Location = new System.Drawing.Point(667, 12);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(121, 21);
+            this.comboBox1.TabIndex = 40;
+            // 
+            // CountriesYes
+            // 
+            this.CountriesYes.AutoSize = true;
+            this.CountriesYes.Location = new System.Drawing.Point(667, 198);
+            this.CountriesYes.Name = "CountriesYes";
+            this.CountriesYes.Size = new System.Drawing.Size(25, 13);
+            this.CountriesYes.TabIndex = 41;
+            this.CountriesYes.Text = "Yes";
+            // 
+            // CountriesNo
+            // 
+            this.CountriesNo.AutoSize = true;
+            this.CountriesNo.Location = new System.Drawing.Point(709, 198);
+            this.CountriesNo.Name = "CountriesNo";
+            this.CountriesNo.Size = new System.Drawing.Size(21, 13);
+            this.CountriesNo.TabIndex = 42;
+            this.CountriesNo.Text = "No";
+            // 
+            // CountriesAbstain
+            // 
+            this.CountriesAbstain.AutoSize = true;
+            this.CountriesAbstain.Location = new System.Drawing.Point(749, 198);
+            this.CountriesAbstain.Name = "CountriesAbstain";
+            this.CountriesAbstain.Size = new System.Drawing.Size(42, 13);
+            this.CountriesAbstain.TabIndex = 43;
+            this.CountriesAbstain.Text = "Abstain";
+            // 
+            // VoteYesNumber
+            // 
+            this.VoteYesNumber.AutoSize = true;
+            this.VoteYesNumber.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.VoteYesNumber.Location = new System.Drawing.Point(670, 175);
+            this.VoteYesNumber.Name = "VoteYesNumber";
+            this.VoteYesNumber.Size = new System.Drawing.Size(19, 13);
+            this.VoteYesNumber.TabIndex = 44;
+            this.VoteYesNumber.Text = "27";
+            // 
+            // VoteNoNumber
+            // 
+            this.VoteNoNumber.AutoSize = true;
+            this.VoteNoNumber.ForeColor = System.Drawing.Color.Red;
+            this.VoteNoNumber.Location = new System.Drawing.Point(713, 175);
+            this.VoteNoNumber.Name = "VoteNoNumber";
+            this.VoteNoNumber.Size = new System.Drawing.Size(13, 13);
+            this.VoteNoNumber.TabIndex = 45;
+            this.VoteNoNumber.Text = "0";
+            // 
+            // VoteAbstainNumber
+            // 
+            this.VoteAbstainNumber.AutoSize = true;
+            this.VoteAbstainNumber.Location = new System.Drawing.Point(762, 175);
+            this.VoteAbstainNumber.Name = "VoteAbstainNumber";
+            this.VoteAbstainNumber.Size = new System.Drawing.Size(13, 13);
+            this.VoteAbstainNumber.TabIndex = 46;
+            this.VoteAbstainNumber.Text = "0";
+            // 
+            // PassedFailed
+            // 
+            this.PassedFailed.AutoSize = true;
+            this.PassedFailed.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F);
+            this.PassedFailed.Location = new System.Drawing.Point(674, 48);
+            this.PassedFailed.Name = "PassedFailed";
+            this.PassedFailed.Size = new System.Drawing.Size(114, 36);
+            this.PassedFailed.TabIndex = 47;
+            this.PassedFailed.Text = "Passed";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 565);
+            this.Controls.Add(this.PassedFailed);
+            this.Controls.Add(this.VoteAbstainNumber);
+            this.Controls.Add(this.VoteNoNumber);
+            this.Controls.Add(this.VoteYesNumber);
+            this.Controls.Add(this.CountriesAbstain);
+            this.Controls.Add(this.CountriesNo);
+            this.Controls.Add(this.CountriesYes);
+            this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -563,7 +651,6 @@
             this.Controls.Add(this.BulVote);
             this.Controls.Add(this.BelVote);
             this.Controls.Add(this.AusVote);
-            this.Controls.Add(this.progressBar2);
             this.Controls.Add(this.MemberStatesVote);
             this.Controls.Add(this.CountriesList);
             this.Controls.Add(this.AllCountries);
@@ -611,7 +698,6 @@
         private System.Windows.Forms.CheckBox AllCountries;
         private System.Windows.Forms.CheckedListBox CountriesList;
         private System.Windows.Forms.ProgressBar MemberStatesVote;
-        private System.Windows.Forms.ProgressBar progressBar2;
         private System.Windows.Forms.TrackBar AusVote;
         private System.Windows.Forms.TrackBar BelVote;
         private System.Windows.Forms.TrackBar CroVote;
@@ -645,6 +731,14 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Label CountriesYes;
+        private System.Windows.Forms.Label CountriesNo;
+        private System.Windows.Forms.Label CountriesAbstain;
+        private System.Windows.Forms.Label VoteYesNumber;
+        private System.Windows.Forms.Label VoteNoNumber;
+        private System.Windows.Forms.Label VoteAbstainNumber;
+        private System.Windows.Forms.Label PassedFailed;
     }
 }
 
