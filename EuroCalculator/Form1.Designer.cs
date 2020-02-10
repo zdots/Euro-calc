@@ -260,6 +260,7 @@
             this.CypVote.Size = new System.Drawing.Size(201, 19);
             this.CypVote.TabIndex = 11;
             this.CypVote.Value = 2;
+            this.CypVote.Scroll += new System.EventHandler(this.CypVote_Scroll);
             // 
             // LatVote
             // 
@@ -655,7 +656,7 @@
             this.Controls.Add(this.CountriesList);
             this.Controls.Add(this.AllCountries);
             this.Controls.Add(this.EurozoneOnly);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";

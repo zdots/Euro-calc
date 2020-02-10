@@ -135,5 +135,10 @@ namespace EuroCalculator
         {
             countparticipants();
         }
+
+        private void CypVote_Scroll(object sender, EventArgs e)
+        {
+
+        }
     }
 }
