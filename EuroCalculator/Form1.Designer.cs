@@ -64,7 +64,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.VoteType = new System.Windows.Forms.ComboBox();
             this.CountriesYes = new System.Windows.Forms.Label();
             this.CountriesNo = new System.Windows.Forms.Label();
             this.CountriesAbstain = new System.Windows.Forms.Label();
@@ -72,6 +72,7 @@
             this.VoteNoNumber = new System.Windows.Forms.Label();
             this.VoteAbstainNumber = new System.Windows.Forms.Label();
             this.PassedFailed = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.AusVote)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BelVote)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CroVote)).BeginInit();
@@ -542,19 +543,20 @@
             this.label4.TabIndex = 39;
             this.label4.Text = "Yes";
             // 
-            // comboBox1
+            // VoteType
             // 
-            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.VoteType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.VoteType.FormattingEnabled = true;
+            this.VoteType.Items.AddRange(new object[] {
             "Qualified majority",
             "Reinforced qualified majority",
             "Simple Majority",
             "Unanimity"});
-            this.comboBox1.Location = new System.Drawing.Point(667, 12);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 21);
-            this.comboBox1.TabIndex = 40;
+            this.VoteType.Location = new System.Drawing.Point(596, 12);
+            this.VoteType.Name = "VoteType";
+            this.VoteType.Size = new System.Drawing.Size(192, 21);
+            this.VoteType.TabIndex = 40;
+            this.VoteType.SelectedIndexChanged += new System.EventHandler(this.VoteType_SelectedIndexChanged);
             // 
             // CountriesYes
             // 
@@ -622,11 +624,21 @@
             this.PassedFailed.TabIndex = 47;
             this.PassedFailed.Text = "Passed";
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(523, 15);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(67, 13);
+            this.label5.TabIndex = 48;
+            this.label5.Text = "Voting Type:";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(806, 564);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.PassedFailed);
             this.Controls.Add(this.VoteAbstainNumber);
             this.Controls.Add(this.VoteNoNumber);
@@ -634,7 +646,7 @@
             this.Controls.Add(this.CountriesAbstain);
             this.Controls.Add(this.CountriesNo);
             this.Controls.Add(this.CountriesYes);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.VoteType);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -746,7 +758,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox VoteType;
         private System.Windows.Forms.Label CountriesYes;
         private System.Windows.Forms.Label CountriesNo;
         private System.Windows.Forms.Label CountriesAbstain;
@@ -754,6 +766,7 @@
         private System.Windows.Forms.Label VoteNoNumber;
         private System.Windows.Forms.Label VoteAbstainNumber;
         private System.Windows.Forms.Label PassedFailed;
+        private System.Windows.Forms.Label label5;
     }
 }
 

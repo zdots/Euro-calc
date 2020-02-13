@@ -296,6 +296,12 @@ namespace EuroCalculator
         public static Country Spa = new Country { };
         public static Country Swe = new Country { };
         public static Country[] Countries = { Aus, Bel, Bul, Cro, Cyp, Cze, Den, Est, Fin, Fra, Ger, Gre, Hun, Ire, Ita, Lat, Lit, Lux, Mal, Net, Pol, Por, Rom, Slk, Sln, Spa, Swe };
+        public static Voting QualifiedMajority = new Voting{CountryVoteNeeded = 55.0,PercentVoteNeeded = 65.0,VoteName = "Qualified Majority"};
+        public static Voting ReinforcedQualifiedMajority = new Voting { CountryVoteNeeded = 72.0, PercentVoteNeeded = 65.0, VoteName = "Reinforced Qualified Majority" };
+        public static Voting SimpleMajority = new Voting { CountryVoteNeeded = 50.0, PercentVoteNeeded = 0.0, VoteName = "Simple Majority" };
+        public static Voting Unanimity = new Voting { CountryVoteNeeded = 100.0, PercentVoteNeeded = 0.0, VoteName = "Unanimity" };
+        public static Voting[] VoteTypes = { QualifiedMajority, ReinforcedQualifiedMajority, SimpleMajority, Unanimity };
+        public double VoteNeeded = 0.0;
 
         private void InitialiseCountries()
         {
@@ -471,22 +477,32 @@ namespace EuroCalculator
         private void HasPassed()
         {
             // This function calculates whether or not the vote has passed based on the values of the MemberStatesVote bar's value and maximum.
-            if (MemberStatesVote.Maximum > 0)
+            if (VoteNeeded != 0.0)
             {
-                // The number "55" can be replaced with the percentage required based on the voting type. This is a placeholder value.
-                if (((double)MemberStatesVote.Value / (double)MemberStatesVote.Maximum) * 100 > 55)
+                if (MemberStatesVote.Maximum > 0)
                 {
-                    PassedFailed.Text = "Passed";
+                    // The number "55" can be replaced with the percentage required based on the voting type. This is a placeholder value.
+                    if (((double)MemberStatesVote.Value / (double)MemberStatesVote.Maximum) * 100 > VoteNeeded)
+                    {
+                        PassedFailed.Text = "Passed";
+                    }
+                    else
+                    {
+                        PassedFailed.Text = "Failed";
+                    }
                 }
-                else
-                {
-                    PassedFailed.Text = "Failed";
-                }
+            }
+            else
+            {
+                MessageBox.Show("Please select a voting type.");
             }
         }
         private void UpdateVoteBars()
         {
             // This function is called whenever a slider or tickbox changes state. It updates the vote bar.
+            votesYes = 0;
+            votesNo = 0;
+            votesAbstain = 0;
             MemberStatesVote.Maximum = 0;
             MemberStatesVote.Value = 0;
             for (int i = 0; i < 27; i++)
@@ -498,12 +514,25 @@ namespace EuroCalculator
                     if (Countries[i].vote == 2)
                     {
                         MemberStatesVote.Value++;
+                        votesYes++;
                         // For each country that has present set as true, and has voted "yes", the value for the bar is increased.
                     }
+                    else if (Countries[i].vote == 1)
+                    {
+                        votesNo++;
+                    }
+                    else if (Countries[i].vote == 0)
+                    {
+                        votesAbstain++;
+                    }
                 }
+                
                 ParticipatingStates.Text = $"{MemberStatesVote.Maximum}";
                 // The text informing the user of how many states have participated is updated based on the maximum value of the bar. This is useful for debugging as well.
             }
+            VoteYesNumber.Text = $"{votesYes}";
+            VoteNoNumber.Text = $"{votesNo}";
+            VoteAbstainNumber.Text = $"{votesAbstain}";
             HasPassed();
             // The function calls HasPassed to check if the vote has passed or failed.
         }
@@ -515,7 +544,6 @@ namespace EuroCalculator
                 if(CountriesList.GetItemChecked(i) == true)
                 {
                     Countries[i].present = true;
-                    UpdateVoteBars();
                     count++;
                 }
             }
@@ -526,7 +554,6 @@ namespace EuroCalculator
                 for (int i = 0; i < 27; i++)
                 {
                     Countries[i].present = false;
-                    UpdateVoteBars();
                     CountriesList.SetItemChecked(i, false);
                 }
                 // If any countries are participating in the vote, it runs through all the countries and unchecks them, and makes sure the "all countries participating" box is unchecked as well.
@@ -536,11 +563,11 @@ namespace EuroCalculator
                 for (int i = 0; i < 27; i++)
                 {
                     Countries[i].present = true;
-                    UpdateVoteBars();
                     CountriesList.SetItemChecked(i, true);
                 }
                 // If no countries are participating in the vote, it runs through all the countries and checks them.
             }
+            UpdateVoteBars();
             howToggle = false;
             count = 0;
         }
@@ -697,6 +724,12 @@ namespace EuroCalculator
         {
             // Unfinished.
         }
+
+        private void VoteType_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            VoteNeeded = VoteTypes[VoteType.SelectedIndex].CountryVoteNeeded;
+            UpdateVoteBars();
+        }
     }
 
     public class Country
@@ -707,5 +740,13 @@ namespace EuroCalculator
         public bool eurozonemember = false;
         public bool present = false;
         public int vote = 2;
+    }
+
+    public class Voting
+    {
+        // Class containing all necessary values for the voting instances.
+        public string VoteName = "VoteType";
+        public double CountryVoteNeeded = 0.0;
+        public double PercentVoteNeeded = 0.0;
     }
 }
