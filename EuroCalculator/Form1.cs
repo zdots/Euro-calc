@@ -271,7 +271,6 @@ namespace EuroCalculator
         {
             InitializeComponent();
         }
-
         private bool howToggle = false;
         private int count = 0;
         private int votesYes = 0;
@@ -391,11 +390,6 @@ namespace EuroCalculator
         }
 
         private void CypVote_Scroll(object sender, EventArgs e)
-        {
-
-        }
-
-        private void GerVote_Scroll(object sender, EventArgs e)
         {
 
         }
