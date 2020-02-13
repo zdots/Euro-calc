@@ -105,10 +105,9 @@
             // EurozoneOnly
             // 
             this.EurozoneOnly.AutoSize = true;
-            this.EurozoneOnly.Location = new System.Drawing.Point(234, 9);
-            this.EurozoneOnly.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.EurozoneOnly.Location = new System.Drawing.Point(156, 6);
             this.EurozoneOnly.Name = "EurozoneOnly";
-            this.EurozoneOnly.Size = new System.Drawing.Size(298, 24);
+            this.EurozoneOnly.Size = new System.Drawing.Size(201, 17);
             this.EurozoneOnly.TabIndex = 2;
             this.EurozoneOnly.Text = "Only Eurozone countries participating";
             this.EurozoneOnly.UseVisualStyleBackColor = true;
@@ -116,10 +115,9 @@
             // AllCountries
             // 
             this.AllCountries.AutoSize = true;
-            this.AllCountries.Location = new System.Drawing.Point(10, 9);
-            this.AllCountries.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.AllCountries.Location = new System.Drawing.Point(7, 6);
             this.AllCountries.Name = "AllCountries";
-            this.AllCountries.Size = new System.Drawing.Size(211, 24);
+            this.AllCountries.Size = new System.Drawing.Size(143, 17);
             this.AllCountries.TabIndex = 3;
             this.AllCountries.Text = "All countries participating";
             this.AllCountries.UseVisualStyleBackColor = true;
@@ -158,22 +156,20 @@
             "Slovenia",
             "Spain",
             "Sweden"});
-            this.CountriesList.Location = new System.Drawing.Point(10, 69);
-            this.CountriesList.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.CountriesList.Location = new System.Drawing.Point(5, 36);
             this.CountriesList.Name = "CountriesList";
-            this.CountriesList.Size = new System.Drawing.Size(212, 787);
+            this.CountriesList.Size = new System.Drawing.Size(143, 517);
             this.CountriesList.TabIndex = 4;
             this.CountriesList.TabStop = false;
             this.CountriesList.SelectedIndexChanged += new System.EventHandler(this.CountriesList_SelectedIndexChanged);
             // 
             // MemberStatesVote
             // 
-            this.MemberStatesVote.Location = new System.Drawing.Point(1005, 223);
-            this.MemberStatesVote.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.MemberStatesVote.Location = new System.Drawing.Point(670, 145);
             this.MemberStatesVote.MarqueeAnimationSpeed = 0;
             this.MemberStatesVote.Maximum = 27;
             this.MemberStatesVote.Name = "MemberStatesVote";
-            this.MemberStatesVote.Size = new System.Drawing.Size(177, 35);
+            this.MemberStatesVote.Size = new System.Drawing.Size(118, 23);
             this.MemberStatesVote.Style = System.Windows.Forms.ProgressBarStyle.Continuous;
             this.MemberStatesVote.TabIndex = 5;
             // 
@@ -181,11 +177,10 @@
             // 
             this.AusVote.AutoSize = false;
             this.AusVote.LargeChange = 1;
-            this.AusVote.Location = new System.Drawing.Point(231, 71);
-            this.AusVote.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.AusVote.Location = new System.Drawing.Point(154, 41);
             this.AusVote.Maximum = 2;
             this.AusVote.Name = "AusVote";
-            this.AusVote.Size = new System.Drawing.Size(302, 29);
+            this.AusVote.Size = new System.Drawing.Size(201, 18);
             this.AusVote.TabIndex = 7;
             this.AusVote.Value = 2;
             // 
@@ -193,11 +188,10 @@
             // 
             this.BelVote.AutoSize = false;
             this.BelVote.LargeChange = 1;
-            this.BelVote.Location = new System.Drawing.Point(231, 100);
-            this.BelVote.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.BelVote.Location = new System.Drawing.Point(154, 60);
             this.BelVote.Maximum = 2;
             this.BelVote.Name = "BelVote";
-            this.BelVote.Size = new System.Drawing.Size(302, 29);
+            this.BelVote.Size = new System.Drawing.Size(201, 18);
             this.BelVote.TabIndex = 8;
             this.BelVote.Value = 2;
             // 
@@ -205,11 +199,10 @@
             // 
             this.CroVote.AutoSize = false;
             this.CroVote.LargeChange = 1;
-            this.CroVote.Location = new System.Drawing.Point(231, 158);
-            this.CroVote.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.CroVote.Location = new System.Drawing.Point(154, 98);
             this.CroVote.Maximum = 2;
             this.CroVote.Name = "CroVote";
-            this.CroVote.Size = new System.Drawing.Size(302, 29);
+            this.CroVote.Size = new System.Drawing.Size(201, 18);
             this.CroVote.TabIndex = 10;
             this.CroVote.Value = 2;
             // 
@@ -217,11 +210,10 @@
             // 
             this.BulVote.AutoSize = false;
             this.BulVote.LargeChange = 1;
-            this.BulVote.Location = new System.Drawing.Point(231, 129);
-            this.BulVote.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.BulVote.Location = new System.Drawing.Point(154, 79);
             this.BulVote.Maximum = 2;
             this.BulVote.Name = "BulVote";
-            this.BulVote.Size = new System.Drawing.Size(302, 29);
+            this.BulVote.Size = new System.Drawing.Size(201, 18);
             this.BulVote.TabIndex = 9;
             this.BulVote.Value = 2;
             // 
@@ -229,11 +221,10 @@
             // 
             this.EstVote.AutoSize = false;
             this.EstVote.LargeChange = 1;
-            this.EstVote.Location = new System.Drawing.Point(231, 275);
-            this.EstVote.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.EstVote.Location = new System.Drawing.Point(154, 174);
             this.EstVote.Maximum = 2;
             this.EstVote.Name = "EstVote";
-            this.EstVote.Size = new System.Drawing.Size(302, 29);
+            this.EstVote.Size = new System.Drawing.Size(201, 18);
             this.EstVote.TabIndex = 14;
             this.EstVote.Value = 2;
             // 
@@ -241,11 +232,10 @@
             // 
             this.DenVote.AutoSize = false;
             this.DenVote.LargeChange = 1;
-            this.DenVote.Location = new System.Drawing.Point(231, 246);
-            this.DenVote.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.DenVote.Location = new System.Drawing.Point(154, 155);
             this.DenVote.Maximum = 2;
             this.DenVote.Name = "DenVote";
-            this.DenVote.Size = new System.Drawing.Size(302, 29);
+            this.DenVote.Size = new System.Drawing.Size(201, 18);
             this.DenVote.TabIndex = 13;
             this.DenVote.Value = 2;
             // 
@@ -253,11 +243,10 @@
             // 
             this.CzeVote.AutoSize = false;
             this.CzeVote.LargeChange = 1;
-            this.CzeVote.Location = new System.Drawing.Point(231, 217);
-            this.CzeVote.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.CzeVote.Location = new System.Drawing.Point(154, 136);
             this.CzeVote.Maximum = 2;
             this.CzeVote.Name = "CzeVote";
-            this.CzeVote.Size = new System.Drawing.Size(302, 29);
+            this.CzeVote.Size = new System.Drawing.Size(201, 18);
             this.CzeVote.TabIndex = 12;
             this.CzeVote.Value = 2;
             // 
@@ -265,11 +254,10 @@
             // 
             this.CypVote.AutoSize = false;
             this.CypVote.LargeChange = 1;
-            this.CypVote.Location = new System.Drawing.Point(231, 188);
-            this.CypVote.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.CypVote.Location = new System.Drawing.Point(154, 117);
             this.CypVote.Maximum = 2;
             this.CypVote.Name = "CypVote";
-            this.CypVote.Size = new System.Drawing.Size(302, 29);
+            this.CypVote.Size = new System.Drawing.Size(201, 18);
             this.CypVote.TabIndex = 11;
             this.CypVote.Value = 2;
             // 
@@ -277,11 +265,10 @@
             // 
             this.LatVote.AutoSize = false;
             this.LatVote.LargeChange = 1;
-            this.LatVote.Location = new System.Drawing.Point(231, 509);
-            this.LatVote.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.LatVote.Location = new System.Drawing.Point(154, 326);
             this.LatVote.Maximum = 2;
             this.LatVote.Name = "LatVote";
-            this.LatVote.Size = new System.Drawing.Size(302, 29);
+            this.LatVote.Size = new System.Drawing.Size(201, 18);
             this.LatVote.TabIndex = 22;
             this.LatVote.Value = 2;
             // 
@@ -289,11 +276,10 @@
             // 
             this.ItaVote.AutoSize = false;
             this.ItaVote.LargeChange = 1;
-            this.ItaVote.Location = new System.Drawing.Point(231, 480);
-            this.ItaVote.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.ItaVote.Location = new System.Drawing.Point(154, 307);
             this.ItaVote.Maximum = 2;
             this.ItaVote.Name = "ItaVote";
-            this.ItaVote.Size = new System.Drawing.Size(302, 29);
+            this.ItaVote.Size = new System.Drawing.Size(201, 18);
             this.ItaVote.TabIndex = 21;
             this.ItaVote.Value = 2;
             // 
@@ -301,11 +287,10 @@
             // 
             this.IreVote.AutoSize = false;
             this.IreVote.LargeChange = 1;
-            this.IreVote.Location = new System.Drawing.Point(231, 451);
-            this.IreVote.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.IreVote.Location = new System.Drawing.Point(154, 288);
             this.IreVote.Maximum = 2;
             this.IreVote.Name = "IreVote";
-            this.IreVote.Size = new System.Drawing.Size(302, 29);
+            this.IreVote.Size = new System.Drawing.Size(201, 18);
             this.IreVote.TabIndex = 20;
             this.IreVote.Value = 2;
             // 
@@ -313,11 +298,10 @@
             // 
             this.HunVote.AutoSize = false;
             this.HunVote.LargeChange = 1;
-            this.HunVote.Location = new System.Drawing.Point(231, 422);
-            this.HunVote.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.HunVote.Location = new System.Drawing.Point(154, 269);
             this.HunVote.Maximum = 2;
             this.HunVote.Name = "HunVote";
-            this.HunVote.Size = new System.Drawing.Size(302, 29);
+            this.HunVote.Size = new System.Drawing.Size(201, 18);
             this.HunVote.TabIndex = 19;
             this.HunVote.Value = 2;
             // 
@@ -325,11 +309,10 @@
             // 
             this.GreVote.AutoSize = false;
             this.GreVote.LargeChange = 1;
-            this.GreVote.Location = new System.Drawing.Point(231, 392);
-            this.GreVote.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.GreVote.Location = new System.Drawing.Point(154, 250);
             this.GreVote.Maximum = 2;
             this.GreVote.Name = "GreVote";
-            this.GreVote.Size = new System.Drawing.Size(302, 29);
+            this.GreVote.Size = new System.Drawing.Size(201, 18);
             this.GreVote.TabIndex = 18;
             this.GreVote.Value = 2;
             // 
@@ -337,24 +320,21 @@
             // 
             this.GerVote.AutoSize = false;
             this.GerVote.LargeChange = 1;
-            this.GerVote.Location = new System.Drawing.Point(231, 363);
-            this.GerVote.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.GerVote.Location = new System.Drawing.Point(154, 231);
             this.GerVote.Maximum = 2;
             this.GerVote.Name = "GerVote";
-            this.GerVote.Size = new System.Drawing.Size(302, 29);
+            this.GerVote.Size = new System.Drawing.Size(201, 18);
             this.GerVote.TabIndex = 17;
             this.GerVote.Value = 2;
-            this.GerVote.Scroll += new System.EventHandler(this.GerVote_Scroll);
             // 
             // FraVote
             // 
             this.FraVote.AutoSize = false;
             this.FraVote.LargeChange = 1;
-            this.FraVote.Location = new System.Drawing.Point(231, 334);
-            this.FraVote.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.FraVote.Location = new System.Drawing.Point(154, 212);
             this.FraVote.Maximum = 2;
             this.FraVote.Name = "FraVote";
-            this.FraVote.Size = new System.Drawing.Size(302, 29);
+            this.FraVote.Size = new System.Drawing.Size(201, 18);
             this.FraVote.TabIndex = 16;
             this.FraVote.Value = 2;
             // 
@@ -362,11 +342,10 @@
             // 
             this.FinVote.AutoSize = false;
             this.FinVote.LargeChange = 1;
-            this.FinVote.Location = new System.Drawing.Point(231, 305);
-            this.FinVote.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.FinVote.Location = new System.Drawing.Point(154, 193);
             this.FinVote.Maximum = 2;
             this.FinVote.Name = "FinVote";
-            this.FinVote.Size = new System.Drawing.Size(302, 29);
+            this.FinVote.Size = new System.Drawing.Size(201, 18);
             this.FinVote.TabIndex = 15;
             this.FinVote.Value = 2;
             // 
@@ -374,11 +353,10 @@
             // 
             this.SweVote.AutoSize = false;
             this.SweVote.LargeChange = 1;
-            this.SweVote.Location = new System.Drawing.Point(231, 831);
-            this.SweVote.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.SweVote.Location = new System.Drawing.Point(154, 535);
             this.SweVote.Maximum = 2;
             this.SweVote.Name = "SweVote";
-            this.SweVote.Size = new System.Drawing.Size(302, 29);
+            this.SweVote.Size = new System.Drawing.Size(201, 18);
             this.SweVote.TabIndex = 33;
             this.SweVote.Value = 2;
             // 
@@ -386,11 +364,10 @@
             // 
             this.SpaVote.AutoSize = false;
             this.SpaVote.LargeChange = 1;
-            this.SpaVote.Location = new System.Drawing.Point(231, 802);
-            this.SpaVote.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.SpaVote.Location = new System.Drawing.Point(154, 516);
             this.SpaVote.Maximum = 2;
             this.SpaVote.Name = "SpaVote";
-            this.SpaVote.Size = new System.Drawing.Size(302, 29);
+            this.SpaVote.Size = new System.Drawing.Size(201, 18);
             this.SpaVote.TabIndex = 32;
             this.SpaVote.Value = 2;
             // 
@@ -398,11 +375,10 @@
             // 
             this.SlnVote.AutoSize = false;
             this.SlnVote.LargeChange = 1;
-            this.SlnVote.Location = new System.Drawing.Point(231, 772);
-            this.SlnVote.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.SlnVote.Location = new System.Drawing.Point(154, 497);
             this.SlnVote.Maximum = 2;
             this.SlnVote.Name = "SlnVote";
-            this.SlnVote.Size = new System.Drawing.Size(302, 29);
+            this.SlnVote.Size = new System.Drawing.Size(201, 18);
             this.SlnVote.TabIndex = 31;
             this.SlnVote.Value = 2;
             // 
@@ -410,11 +386,10 @@
             // 
             this.SlkVote.AutoSize = false;
             this.SlkVote.LargeChange = 1;
-            this.SlkVote.Location = new System.Drawing.Point(231, 743);
-            this.SlkVote.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.SlkVote.Location = new System.Drawing.Point(154, 478);
             this.SlkVote.Maximum = 2;
             this.SlkVote.Name = "SlkVote";
-            this.SlkVote.Size = new System.Drawing.Size(302, 29);
+            this.SlkVote.Size = new System.Drawing.Size(201, 18);
             this.SlkVote.TabIndex = 30;
             this.SlkVote.Value = 2;
             // 
@@ -422,11 +397,10 @@
             // 
             this.RomVote.AutoSize = false;
             this.RomVote.LargeChange = 1;
-            this.RomVote.Location = new System.Drawing.Point(231, 714);
-            this.RomVote.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.RomVote.Location = new System.Drawing.Point(154, 459);
             this.RomVote.Maximum = 2;
             this.RomVote.Name = "RomVote";
-            this.RomVote.Size = new System.Drawing.Size(302, 29);
+            this.RomVote.Size = new System.Drawing.Size(201, 18);
             this.RomVote.TabIndex = 29;
             this.RomVote.Value = 2;
             // 
@@ -434,11 +408,10 @@
             // 
             this.PorVote.AutoSize = false;
             this.PorVote.LargeChange = 1;
-            this.PorVote.Location = new System.Drawing.Point(231, 685);
-            this.PorVote.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.PorVote.Location = new System.Drawing.Point(154, 440);
             this.PorVote.Maximum = 2;
             this.PorVote.Name = "PorVote";
-            this.PorVote.Size = new System.Drawing.Size(302, 29);
+            this.PorVote.Size = new System.Drawing.Size(201, 18);
             this.PorVote.TabIndex = 28;
             this.PorVote.Value = 2;
             // 
@@ -446,11 +419,10 @@
             // 
             this.PolVote.AutoSize = false;
             this.PolVote.LargeChange = 1;
-            this.PolVote.Location = new System.Drawing.Point(231, 655);
-            this.PolVote.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.PolVote.Location = new System.Drawing.Point(154, 421);
             this.PolVote.Maximum = 2;
             this.PolVote.Name = "PolVote";
-            this.PolVote.Size = new System.Drawing.Size(302, 29);
+            this.PolVote.Size = new System.Drawing.Size(201, 18);
             this.PolVote.TabIndex = 27;
             this.PolVote.Value = 2;
             // 
@@ -458,11 +430,10 @@
             // 
             this.NetVote.AutoSize = false;
             this.NetVote.LargeChange = 1;
-            this.NetVote.Location = new System.Drawing.Point(231, 626);
-            this.NetVote.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.NetVote.Location = new System.Drawing.Point(154, 402);
             this.NetVote.Maximum = 2;
             this.NetVote.Name = "NetVote";
-            this.NetVote.Size = new System.Drawing.Size(302, 29);
+            this.NetVote.Size = new System.Drawing.Size(201, 18);
             this.NetVote.TabIndex = 26;
             this.NetVote.Value = 2;
             // 
@@ -470,11 +441,10 @@
             // 
             this.MalVote.AutoSize = false;
             this.MalVote.LargeChange = 1;
-            this.MalVote.Location = new System.Drawing.Point(231, 597);
-            this.MalVote.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.MalVote.Location = new System.Drawing.Point(154, 383);
             this.MalVote.Maximum = 2;
             this.MalVote.Name = "MalVote";
-            this.MalVote.Size = new System.Drawing.Size(302, 29);
+            this.MalVote.Size = new System.Drawing.Size(201, 18);
             this.MalVote.TabIndex = 25;
             this.MalVote.Value = 2;
             // 
@@ -482,11 +452,10 @@
             // 
             this.LuxVote.AutoSize = false;
             this.LuxVote.LargeChange = 1;
-            this.LuxVote.Location = new System.Drawing.Point(231, 568);
-            this.LuxVote.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.LuxVote.Location = new System.Drawing.Point(154, 364);
             this.LuxVote.Maximum = 2;
             this.LuxVote.Name = "LuxVote";
-            this.LuxVote.Size = new System.Drawing.Size(302, 29);
+            this.LuxVote.Size = new System.Drawing.Size(201, 18);
             this.LuxVote.TabIndex = 24;
             this.LuxVote.Value = 2;
             // 
@@ -494,20 +463,18 @@
             // 
             this.LitVote.AutoSize = false;
             this.LitVote.LargeChange = 1;
-            this.LitVote.Location = new System.Drawing.Point(231, 538);
-            this.LitVote.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.LitVote.Location = new System.Drawing.Point(154, 345);
             this.LitVote.Maximum = 2;
             this.LitVote.Name = "LitVote";
-            this.LitVote.Size = new System.Drawing.Size(302, 29);
+            this.LitVote.Size = new System.Drawing.Size(201, 18);
             this.LitVote.TabIndex = 23;
             this.LitVote.Value = 2;
             // 
             // CalculateButton
             // 
-            this.CalculateButton.Location = new System.Drawing.Point(1005, 158);
-            this.CalculateButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.CalculateButton.Location = new System.Drawing.Point(670, 103);
             this.CalculateButton.Name = "CalculateButton";
-            this.CalculateButton.Size = new System.Drawing.Size(177, 35);
+            this.CalculateButton.Size = new System.Drawing.Size(118, 23);
             this.CalculateButton.TabIndex = 34;
             this.CalculateButton.Text = "Calculate";
             this.CalculateButton.UseVisualStyleBackColor = true;
@@ -516,18 +483,16 @@
             // ParticipatingStates
             // 
             this.ParticipatingStates.AutoSize = true;
-            this.ParticipatingStates.Location = new System.Drawing.Point(1000, 198);
-            this.ParticipatingStates.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.ParticipatingStates.Location = new System.Drawing.Point(667, 129);
             this.ParticipatingStates.Name = "ParticipatingStates";
-            this.ParticipatingStates.Size = new System.Drawing.Size(35, 13);
+            this.ParticipatingStates.Size = new System.Drawing.Size(27, 13);
             this.ParticipatingStates.TabIndex = 35;
             this.ParticipatingStates.Text = "N/A";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(840, 197);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(560, 128);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(101, 13);
             this.label1.TabIndex = 36;
@@ -536,8 +501,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(213, 40);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Location = new System.Drawing.Point(151, 26);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(42, 13);
             this.label2.TabIndex = 37;
@@ -546,8 +510,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(366, 40);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Location = new System.Drawing.Point(244, 26);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(21, 13);
             this.label3.TabIndex = 38;
@@ -556,8 +519,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(498, 40);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label4.Location = new System.Drawing.Point(332, 26);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(25, 13);
             this.label4.TabIndex = 39;
@@ -572,17 +534,15 @@
             "Reinforced qualified majority",
             "Simple Majority",
             "Unanimity"});
-            this.comboBox1.Location = new System.Drawing.Point(1000, 18);
-            this.comboBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.comboBox1.Location = new System.Drawing.Point(667, 12);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(180, 28);
+            this.comboBox1.Size = new System.Drawing.Size(121, 21);
             this.comboBox1.TabIndex = 40;
             // 
             // CountriesYes
             // 
             this.CountriesYes.AutoSize = true;
-            this.CountriesYes.Location = new System.Drawing.Point(1000, 305);
-            this.CountriesYes.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.CountriesYes.Location = new System.Drawing.Point(667, 198);
             this.CountriesYes.Name = "CountriesYes";
             this.CountriesYes.Size = new System.Drawing.Size(25, 13);
             this.CountriesYes.TabIndex = 41;
@@ -591,8 +551,7 @@
             // CountriesNo
             // 
             this.CountriesNo.AutoSize = true;
-            this.CountriesNo.Location = new System.Drawing.Point(1064, 305);
-            this.CountriesNo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.CountriesNo.Location = new System.Drawing.Point(709, 198);
             this.CountriesNo.Name = "CountriesNo";
             this.CountriesNo.Size = new System.Drawing.Size(21, 13);
             this.CountriesNo.TabIndex = 42;
@@ -601,8 +560,7 @@
             // CountriesAbstain
             // 
             this.CountriesAbstain.AutoSize = true;
-            this.CountriesAbstain.Location = new System.Drawing.Point(1124, 305);
-            this.CountriesAbstain.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.CountriesAbstain.Location = new System.Drawing.Point(749, 198);
             this.CountriesAbstain.Name = "CountriesAbstain";
             this.CountriesAbstain.Size = new System.Drawing.Size(42, 13);
             this.CountriesAbstain.TabIndex = 43;
@@ -612,8 +570,7 @@
             // 
             this.VoteYesNumber.AutoSize = true;
             this.VoteYesNumber.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.VoteYesNumber.Location = new System.Drawing.Point(1005, 269);
-            this.VoteYesNumber.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.VoteYesNumber.Location = new System.Drawing.Point(670, 175);
             this.VoteYesNumber.Name = "VoteYesNumber";
             this.VoteYesNumber.Size = new System.Drawing.Size(19, 13);
             this.VoteYesNumber.TabIndex = 44;
@@ -623,8 +580,7 @@
             // 
             this.VoteNoNumber.AutoSize = true;
             this.VoteNoNumber.ForeColor = System.Drawing.Color.Red;
-            this.VoteNoNumber.Location = new System.Drawing.Point(1070, 269);
-            this.VoteNoNumber.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.VoteNoNumber.Location = new System.Drawing.Point(713, 175);
             this.VoteNoNumber.Name = "VoteNoNumber";
             this.VoteNoNumber.Size = new System.Drawing.Size(13, 13);
             this.VoteNoNumber.TabIndex = 45;
@@ -633,8 +589,7 @@
             // VoteAbstainNumber
             // 
             this.VoteAbstainNumber.AutoSize = true;
-            this.VoteAbstainNumber.Location = new System.Drawing.Point(1143, 269);
-            this.VoteAbstainNumber.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.VoteAbstainNumber.Location = new System.Drawing.Point(762, 175);
             this.VoteAbstainNumber.Name = "VoteAbstainNumber";
             this.VoteAbstainNumber.Size = new System.Drawing.Size(13, 13);
             this.VoteAbstainNumber.TabIndex = 46;
@@ -644,8 +599,7 @@
             // 
             this.PassedFailed.AutoSize = true;
             this.PassedFailed.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F);
-            this.PassedFailed.Location = new System.Drawing.Point(1011, 74);
-            this.PassedFailed.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.PassedFailed.Location = new System.Drawing.Point(674, 48);
             this.PassedFailed.Name = "PassedFailed";
             this.PassedFailed.Size = new System.Drawing.Size(114, 36);
             this.PassedFailed.TabIndex = 47;
@@ -653,9 +607,9 @@
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 565);
+            this.ClientSize = new System.Drawing.Size(806, 564);
             this.Controls.Add(this.PassedFailed);
             this.Controls.Add(this.VoteAbstainNumber);
             this.Controls.Add(this.VoteNoNumber);
@@ -702,7 +656,6 @@
             this.Controls.Add(this.AllCountries);
             this.Controls.Add(this.EurozoneOnly);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
-            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";

@@ -10,16 +10,7 @@ using System.Windows.Forms;
 
 namespace EuroCalculator
 {
-    class Country
-    {
-
-        public string CName = "Country";
-        public double CPop = 0.00;
-        public bool eurozonemember = false;
-        public bool present = false;
-        public string vote = "abstain";
-
-    }
+    
     //class CWorks
     //{
     //    public static Country Aus = new Country { };
@@ -388,5 +379,16 @@ namespace EuroCalculator
         {
             countparticipants();
         }
+    }
+
+    class Country
+    {
+
+        public string CName = "Country";
+        public double CPop = 0.00;
+        public bool eurozonemember = false;
+        public bool present = false;
+        public string vote = "abstain";
+
     }
 }
