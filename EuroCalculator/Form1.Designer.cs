@@ -59,7 +59,6 @@
             this.MalVote = new System.Windows.Forms.TrackBar();
             this.LuxVote = new System.Windows.Forms.TrackBar();
             this.LitVote = new System.Windows.Forms.TrackBar();
-            this.CalculateButton = new System.Windows.Forms.Button();
             this.ParticipatingStates = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -183,6 +182,7 @@
             this.AusVote.Size = new System.Drawing.Size(201, 18);
             this.AusVote.TabIndex = 7;
             this.AusVote.Value = 2;
+            this.AusVote.Scroll += new System.EventHandler(this.AusVote_Scroll);
             // 
             // BelVote
             // 
@@ -470,16 +470,6 @@
             this.LitVote.TabIndex = 23;
             this.LitVote.Value = 2;
             // 
-            // CalculateButton
-            // 
-            this.CalculateButton.Location = new System.Drawing.Point(670, 103);
-            this.CalculateButton.Name = "CalculateButton";
-            this.CalculateButton.Size = new System.Drawing.Size(118, 23);
-            this.CalculateButton.TabIndex = 34;
-            this.CalculateButton.Text = "Calculate";
-            this.CalculateButton.UseVisualStyleBackColor = true;
-            this.CalculateButton.Click += new System.EventHandler(this.CalculateButton_Click);
-            // 
             // ParticipatingStates
             // 
             this.ParticipatingStates.AutoSize = true;
@@ -623,7 +613,6 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.ParticipatingStates);
-            this.Controls.Add(this.CalculateButton);
             this.Controls.Add(this.SweVote);
             this.Controls.Add(this.SpaVote);
             this.Controls.Add(this.SlnVote);
@@ -725,7 +714,6 @@
         private System.Windows.Forms.TrackBar MalVote;
         private System.Windows.Forms.TrackBar LuxVote;
         private System.Windows.Forms.TrackBar LitVote;
-        private System.Windows.Forms.Button CalculateButton;
         private System.Windows.Forms.Label ParticipatingStates;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
