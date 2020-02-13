@@ -107,7 +107,7 @@
             this.EurozoneOnly.AutoSize = true;
             this.EurozoneOnly.Location = new System.Drawing.Point(156, 6);
             this.EurozoneOnly.Name = "EurozoneOnly";
-            this.EurozoneOnly.Size = new System.Drawing.Size(201, 17);
+            this.EurozoneOnly.Size = new System.Drawing.Size(232, 19);
             this.EurozoneOnly.TabIndex = 2;
             this.EurozoneOnly.Text = "Only Eurozone countries participating";
             this.EurozoneOnly.UseVisualStyleBackColor = true;
@@ -117,7 +117,7 @@
             this.AllCountries.AutoSize = true;
             this.AllCountries.Location = new System.Drawing.Point(7, 6);
             this.AllCountries.Name = "AllCountries";
-            this.AllCountries.Size = new System.Drawing.Size(143, 17);
+            this.AllCountries.Size = new System.Drawing.Size(165, 19);
             this.AllCountries.TabIndex = 3;
             this.AllCountries.Text = "All countries participating";
             this.AllCountries.UseVisualStyleBackColor = true;
@@ -158,7 +158,7 @@
             "Sweden"});
             this.CountriesList.Location = new System.Drawing.Point(7, 45);
             this.CountriesList.Name = "CountriesList";
-            this.CountriesList.Size = new System.Drawing.Size(143, 517);
+            this.CountriesList.Size = new System.Drawing.Size(143, 510);
             this.CountriesList.TabIndex = 4;
             this.CountriesList.TabStop = false;
             this.CountriesList.SelectedIndexChanged += new System.EventHandler(this.CountriesList_SelectedIndexChanged);
@@ -327,6 +327,7 @@
             this.GerVote.Size = new System.Drawing.Size(201, 19);
             this.GerVote.TabIndex = 17;
             this.GerVote.Value = 2;
+            this.GerVote.Scroll += new System.EventHandler(this.GerVote_Scroll);
             // 
             // FraVote
             // 
@@ -486,7 +487,7 @@
             this.ParticipatingStates.AutoSize = true;
             this.ParticipatingStates.Location = new System.Drawing.Point(667, 129);
             this.ParticipatingStates.Name = "ParticipatingStates";
-            this.ParticipatingStates.Size = new System.Drawing.Size(35, 13);
+            this.ParticipatingStates.Size = new System.Drawing.Size(41, 15);
             this.ParticipatingStates.TabIndex = 35;
             this.ParticipatingStates.Text = "label1";
             // 
@@ -495,7 +496,7 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(560, 128);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(101, 13);
+            this.label1.Size = new System.Drawing.Size(115, 15);
             this.label1.TabIndex = 36;
             this.label1.Text = "Participating States:";
             // 
@@ -504,7 +505,7 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(142, 26);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(42, 13);
+            this.label2.Size = new System.Drawing.Size(47, 15);
             this.label2.TabIndex = 37;
             this.label2.Text = "Abstain";
             // 
@@ -513,7 +514,7 @@
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(244, 26);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(21, 13);
+            this.label3.Size = new System.Drawing.Size(23, 15);
             this.label3.TabIndex = 38;
             this.label3.Text = "No";
             // 
@@ -522,7 +523,7 @@
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(332, 26);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(25, 13);
+            this.label4.Size = new System.Drawing.Size(27, 15);
             this.label4.TabIndex = 39;
             this.label4.Text = "Yes";
             // 
@@ -545,7 +546,7 @@
             this.CountriesYes.AutoSize = true;
             this.CountriesYes.Location = new System.Drawing.Point(667, 198);
             this.CountriesYes.Name = "CountriesYes";
-            this.CountriesYes.Size = new System.Drawing.Size(25, 13);
+            this.CountriesYes.Size = new System.Drawing.Size(27, 15);
             this.CountriesYes.TabIndex = 41;
             this.CountriesYes.Text = "Yes";
             // 
@@ -554,7 +555,7 @@
             this.CountriesNo.AutoSize = true;
             this.CountriesNo.Location = new System.Drawing.Point(709, 198);
             this.CountriesNo.Name = "CountriesNo";
-            this.CountriesNo.Size = new System.Drawing.Size(21, 13);
+            this.CountriesNo.Size = new System.Drawing.Size(23, 15);
             this.CountriesNo.TabIndex = 42;
             this.CountriesNo.Text = "No";
             // 
@@ -563,7 +564,7 @@
             this.CountriesAbstain.AutoSize = true;
             this.CountriesAbstain.Location = new System.Drawing.Point(749, 198);
             this.CountriesAbstain.Name = "CountriesAbstain";
-            this.CountriesAbstain.Size = new System.Drawing.Size(42, 13);
+            this.CountriesAbstain.Size = new System.Drawing.Size(47, 15);
             this.CountriesAbstain.TabIndex = 43;
             this.CountriesAbstain.Text = "Abstain";
             // 
@@ -573,7 +574,7 @@
             this.VoteYesNumber.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.VoteYesNumber.Location = new System.Drawing.Point(670, 175);
             this.VoteYesNumber.Name = "VoteYesNumber";
-            this.VoteYesNumber.Size = new System.Drawing.Size(19, 13);
+            this.VoteYesNumber.Size = new System.Drawing.Size(21, 15);
             this.VoteYesNumber.TabIndex = 44;
             this.VoteYesNumber.Text = "27";
             // 
@@ -583,7 +584,7 @@
             this.VoteNoNumber.ForeColor = System.Drawing.Color.Red;
             this.VoteNoNumber.Location = new System.Drawing.Point(713, 175);
             this.VoteNoNumber.Name = "VoteNoNumber";
-            this.VoteNoNumber.Size = new System.Drawing.Size(13, 13);
+            this.VoteNoNumber.Size = new System.Drawing.Size(14, 15);
             this.VoteNoNumber.TabIndex = 45;
             this.VoteNoNumber.Text = "0";
             // 
@@ -592,7 +593,7 @@
             this.VoteAbstainNumber.AutoSize = true;
             this.VoteAbstainNumber.Location = new System.Drawing.Point(762, 175);
             this.VoteAbstainNumber.Name = "VoteAbstainNumber";
-            this.VoteAbstainNumber.Size = new System.Drawing.Size(13, 13);
+            this.VoteAbstainNumber.Size = new System.Drawing.Size(14, 15);
             this.VoteAbstainNumber.TabIndex = 46;
             this.VoteAbstainNumber.Text = "0";
             // 
@@ -602,7 +603,7 @@
             this.PassedFailed.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F);
             this.PassedFailed.Location = new System.Drawing.Point(674, 48);
             this.PassedFailed.Name = "PassedFailed";
-            this.PassedFailed.Size = new System.Drawing.Size(114, 36);
+            this.PassedFailed.Size = new System.Drawing.Size(144, 42);
             this.PassedFailed.TabIndex = 47;
             this.PassedFailed.Text = "Passed";
             // 
@@ -610,7 +611,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 565);
+            this.ClientSize = new System.Drawing.Size(822, 565);
             this.Controls.Add(this.PassedFailed);
             this.Controls.Add(this.VoteAbstainNumber);
             this.Controls.Add(this.VoteNoNumber);
