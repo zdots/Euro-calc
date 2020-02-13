@@ -17,7 +17,6 @@ namespace EuroCalculator
         {
             InitializeComponent();
         }
-
         private bool howToggle = false;
         private int count = 0;
         private int votesYes = 0;
