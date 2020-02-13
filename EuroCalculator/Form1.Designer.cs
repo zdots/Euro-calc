@@ -200,7 +200,6 @@
             this.BelVote.Size = new System.Drawing.Size(302, 29);
             this.BelVote.TabIndex = 8;
             this.BelVote.Value = 2;
-            this.BelVote.Scroll += new System.EventHandler(this.BelVote_Scroll);
             // 
             // CroVote
             // 
@@ -273,7 +272,6 @@
             this.CypVote.Size = new System.Drawing.Size(302, 29);
             this.CypVote.TabIndex = 11;
             this.CypVote.Value = 2;
-            this.CypVote.Scroll += new System.EventHandler(this.CypVote_Scroll);
             // 
             // LatVote
             // 
