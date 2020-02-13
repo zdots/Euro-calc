@@ -194,6 +194,7 @@
             this.BelVote.Size = new System.Drawing.Size(201, 19);
             this.BelVote.TabIndex = 8;
             this.BelVote.Value = 2;
+            this.BelVote.Scroll += new System.EventHandler(this.BelVote_Scroll);
             // 
             // CroVote
             // 

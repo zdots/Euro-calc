@@ -140,5 +140,10 @@ namespace EuroCalculator
         {
 
         }
+
+        private void BelVote_Scroll(object sender, EventArgs e)
+        {
+
+        }
     }
 }
