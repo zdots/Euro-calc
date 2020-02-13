@@ -110,6 +110,7 @@
             this.EurozoneOnly.TabIndex = 2;
             this.EurozoneOnly.Text = "Only Eurozone countries participating";
             this.EurozoneOnly.UseVisualStyleBackColor = true;
+            this.EurozoneOnly.CheckedChanged += new System.EventHandler(this.EurozoneOnly_CheckedChanged);
             // 
             // AllCountries
             // 

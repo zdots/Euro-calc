@@ -299,6 +299,7 @@ namespace EuroCalculator
 
         private void InitialiseCountries()
         {
+            // This function creates the countries instances.
             for (int i = 0; i < 27; i++)
             {
                 switch (i)
@@ -469,8 +470,10 @@ namespace EuroCalculator
         }
         private void HasPassed()
         {
+            // This function calculates whether or not the vote has passed based on the values of the MemberStatesVote bar's value and maximum.
             if (MemberStatesVote.Maximum > 0)
             {
+                // The number "55" can be replaced with the percentage required based on the voting type. This is a placeholder value.
                 if (((double)MemberStatesVote.Value / (double)MemberStatesVote.Maximum) * 100 > 55)
                 {
                     PassedFailed.Text = "Passed";
@@ -483,6 +486,7 @@ namespace EuroCalculator
         }
         private void UpdateVoteBars()
         {
+            // This function is called whenever a slider or tickbox changes state. It updates the vote bar.
             MemberStatesVote.Maximum = 0;
             MemberStatesVote.Value = 0;
             for (int i = 0; i < 27; i++)
@@ -490,30 +494,34 @@ namespace EuroCalculator
                 if (Countries[i].present == true)
                 {
                     MemberStatesVote.Maximum++;
+                    // For each country that has present set as true, the maximum value for the bar is increased.
                     if (Countries[i].vote == 2)
                     {
                         MemberStatesVote.Value++;
+                        // For each country that has present set as true, and has voted "yes", the value for the bar is increased.
                     }
                 }
                 ParticipatingStates.Text = $"{MemberStatesVote.Maximum}";
+                // The text informing the user of how many states have participated is updated based on the maximum value of the bar. This is useful for debugging as well.
             }
             HasPassed();
+            // The function calls HasPassed to check if the vote has passed or failed.
         }
         private void AllCountries_CheckedChanged(object sender, EventArgs e)
         {
+            // This function handles the "all countries participating" checkbox.
             for (int i = 0; i < 27;i++)
             {
                 if(CountriesList.GetItemChecked(i) == true)
                 {
-                    MemberStatesVote.Maximum++;
                     Countries[i].present = true;
                     UpdateVoteBars();
                     count++;
                 }
             }
+            // The above for loop runs through all the countries, and checks if any countries are currently participating in the vote.
             if (count != 0)
             {
-                MemberStatesVote.Maximum = 0;
                 AllCountries.Checked = false;
                 for (int i = 0; i < 27; i++)
                 {
@@ -521,33 +529,32 @@ namespace EuroCalculator
                     UpdateVoteBars();
                     CountriesList.SetItemChecked(i, false);
                 }
+                // If any countries are participating in the vote, it runs through all the countries and unchecks them, and makes sure the "all countries participating" box is unchecked as well.
             }
             else
             {
                 for (int i = 0; i < 27; i++)
                 {
-                    MemberStatesVote.Maximum++;
                     Countries[i].present = true;
                     UpdateVoteBars();
                     CountriesList.SetItemChecked(i, true);
                 }
+                // If no countries are participating in the vote, it runs through all the countries and checks them.
             }
             howToggle = false;
             count = 0;
-        }
-        private void checkBox1_CheckedChanged(object sender, EventArgs e)
-        {
-
         }
         private void Form1_Load(object sender, EventArgs e)
         {
             UpdateVoteBars();
             InitialiseCountries();
+            // When the form loads, it creates the countries instances, and makes sure the vote bar is correct.
         }
         private void CountriesList_SelectedIndexChanged(object sender, EventArgs e)
         {
             Countries[CountriesList.SelectedIndex].present = CountriesList.GetItemChecked(CountriesList.SelectedIndex);
             UpdateVoteBars();
+            // When a checkbox is changed, this function changes the state of that countrys participation in it's instance, and then updates the vote bar.
         }
         private void AusVote_Scroll(object sender, EventArgs e)
         {
@@ -684,10 +691,17 @@ namespace EuroCalculator
             Swe.vote = SweVote.Value;
             UpdateVoteBars();
         }
+        // All of these countries functions update their instances vote state, and call the function to update the vote bar.
+
+        private void EurozoneOnly_CheckedChanged(object sender, EventArgs e)
+        {
+            // Unfinished.
+        }
     }
 
     public class Country
     {
+        // Class containing all necessary values for the country instances.
         public string CName = "Country";
         public double CPop = 0.00;
         public bool eurozonemember = false;
