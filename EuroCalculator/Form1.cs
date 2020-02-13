@@ -482,7 +482,7 @@ namespace EuroCalculator
                 if (MemberStatesVote.Maximum > 0)
                 {
                     // The number "55" can be replaced with the percentage required based on the voting type. This is a placeholder value.
-                    if (((double)MemberStatesVote.Value / (double)MemberStatesVote.Maximum) * 100 > VoteNeeded)
+                    if (((double)MemberStatesVote.Value / (double)MemberStatesVote.Maximum) * 100 >= VoteNeeded)
                     {
                         PassedFailed.Text = "Passed";
                     }
