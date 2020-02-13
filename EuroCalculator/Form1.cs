@@ -304,164 +304,162 @@ namespace EuroCalculator
                 switch (i)
                 {
                     case 0:
-                        break;
-                    case 1:
                         Countries[i].CName = "Austria";
                         Countries[i].CPop = 1.98;
                         Countries[i].eurozonemember = true;
                         break;
 
-                    case 2:
+                    case 1:
                         Countries[i].CName = "Belgium";
                         Countries[i].CPop = 2.56;
                         Countries[i].eurozonemember = true;
                         break;
 
-                    case 3:
+                    case 2:
                         Countries[i].CName = "Bulgaria";
                         Countries[i].CPop = 1.56;
                         Countries[i].eurozonemember = false;
                         break;
 
-                    case 4:
+                    case 3:
                         Countries[i].CName = "Croatia";
                         Countries[i].CPop = 0.91;
                         Countries[i].eurozonemember = false;
                         break;
 
-                    case 5:
+                    case 4:
                         Countries[i].CName = "Cyprus";
                         Countries[i].CPop = 0.20;
                         Countries[i].eurozonemember = true;
                         break;
 
-                    case 6:
+                    case 5:
                         Countries[i].CName = "Czech Republic";
                         Countries[i].CPop = 2.35;
                         Countries[i].eurozonemember = false;
                         break;
 
-                    case 7:
+                    case 6:
                         Countries[i].CName = "Denmark";
                         Countries[i].CPop = 1.30;
                         Countries[i].eurozonemember = false;
                         break;
 
-                    case 8:
+                    case 7:
                         Countries[i].CName = "Estonia";
                         Countries[i].CPop = 0.30;
                         Countries[i].eurozonemember = true;
                         break;
 
-                    case 9:
+                    case 8:
                         Countries[i].CName = "Finland";
                         Countries[i].CPop = 1.23;
                         Countries[i].eurozonemember = true;
                         break;
 
-                    case 10:
+                    case 9:
                         Countries[i].CName = "France";
                         Countries[i].CPop = 14.98;
                         Countries[i].eurozonemember = true;
                         break;
 
-                    case 11:
+                    case 10:
                         Countries[i].CName = "Germany";
                         Countries[i].CPop = 18.54;
                         Countries[i].eurozonemember = true;
                         break;
 
-                    case 12:
+                    case 11:
                         Countries[i].CName = "Greece";
                         Countries[i].CPop = 2.40;
                         Countries[i].eurozonemember = true;
                         break;
 
-                    case 13:
+                    case 12:
                         Countries[i].CName = "Hungary";
                         Countries[i].CPop = 2.18;
                         Countries[i].eurozonemember = false;
                         break;
 
-                    case 14:
+                    case 13:
                         Countries[i].CName = "Ireland";
                         Countries[i].CPop = 1.10;
                         Countries[i].eurozonemember = true;
                         break;
 
-                    case 15:
+                    case 14:
                         Countries[i].CName = "Italy";
                         Countries[i].CPop = 13.65;
                         Countries[i].eurozonemember = true;
                         break;
 
-                    case 16:
+                    case 15:
                         Countries[i].CName = "Latvia";
                         Countries[i].CPop = 0.43;
                         Countries[i].eurozonemember = true;
                         break;
 
-                    case 17:
+                    case 16:
                         Countries[i].CName = "Lithuania";
                         Countries[i].CPop = 0.62;
                         Countries[i].eurozonemember = true;
                         break;
 
-                    case 18:
+                    case 17:
                         Countries[i].CName = "Luxembourg";
                         Countries[i].CPop = 0.14;
                         Countries[i].eurozonemember = true;
                         break;
 
-                    case 19:
+                    case 18:
                         Countries[i].CName = "Malta";
                         Countries[i].CPop = 0.11;
                         Countries[i].eurozonemember = true;
                         break;
 
-                    case 20:
+                    case 19:
                         Countries[i].CName = "Netherlands";
                         Countries[i].CPop = 3.89;
                         Countries[i].eurozonemember = true;
                         break;
 
-                    case 21:
+                    case 20:
                         Countries[i].CName = "Poland";
                         Countries[i].CPop = 8.49;
                         Countries[i].eurozonemember = false;
                         break;
 
-                    case 22:
+                    case 21:
                         Countries[i].CName = "Portugal";
                         Countries[i].CPop = 2.30;
                         Countries[i].eurozonemember = true;
                         break;
 
-                    case 23:
+                    case 22:
                         Countries[i].CName = "Romania";
                         Countries[i].CPop = 4.34;
                         Countries[i].eurozonemember = false;
                         break;
 
-                    case 24:
+                    case 23:
                         Countries[i].CName = "Slovakia";
                         Countries[i].CPop = 1.22;
                         Countries[i].eurozonemember = true;
                         break;
 
-                    case 25:
+                    case 24:
                         Countries[i].CName = "Slovenia";
                         Countries[i].CPop = 0.47;
                         Countries[i].eurozonemember = true;
                         break;
 
-                    case 26:
+                    case 25:
                         Countries[i].CName = "Spain";
                         Countries[i].CPop = 10.49;
                         Countries[i].eurozonemember = true;
                         break;
 
-                    case 27:
+                    case 26:
                         Countries[i].CName = "Sweden";
                         Countries[i].CPop = 2.29;
                         Countries[i].eurozonemember = false;
@@ -469,45 +467,73 @@ namespace EuroCalculator
                 }
             }
         }
-        private void countparticipants()
+        private void HasPassed()
         {
-            for (int i = 0; i < CountriesList.Items.Count; i++)
+            if (MemberStatesVote.Maximum > 0)
             {
-                if (CountriesList.GetItemChecked(i) == true)
+                if (((double)MemberStatesVote.Value / (double)MemberStatesVote.Maximum) * 100 > 55)
                 {
-                    count++;
+                    PassedFailed.Text = "Passed";
+                }
+                else
+                {
+                    PassedFailed.Text = "Failed";
                 }
             }
-            ParticipatingStates.Text = ($"{count}");
-            MemberStatesVote.Maximum = count;
-            count = 0;
+        }
+        private void UpdateVoteBars()
+        {
+            MemberStatesVote.Maximum = 0;
+            MemberStatesVote.Value = 0;
+            for (int i = 0; i < 27; i++)
+            {
+                if (Countries[i].present == true)
+                {
+                    MemberStatesVote.Maximum++;
+                    if (Countries[i].vote == 2)
+                    {
+                        MemberStatesVote.Value++;
+                    }
+                }
+                ParticipatingStates.Text = $"{MemberStatesVote.Maximum}";
+            }
+            HasPassed();
         }
         private void AllCountries_CheckedChanged(object sender, EventArgs e)
         {
-            for (int i = 0; i < CountriesList.Items.Count;i++)
+            for (int i = 0; i < 27;i++)
             {
                 if(CountriesList.GetItemChecked(i) == true)
                 {
+                    MemberStatesVote.Maximum++;
+                    Countries[i].present = true;
+                    UpdateVoteBars();
                     count++;
                 }
             }
             if (count != 0)
             {
-                for (int i = 0; i < CountriesList.Items.Count; i++)
+                MemberStatesVote.Maximum = 0;
+                AllCountries.Checked = false;
+                for (int i = 0; i < 27; i++)
                 {
+                    Countries[i].present = false;
+                    UpdateVoteBars();
                     CountriesList.SetItemChecked(i, false);
                 }
             }
             else
             {
-                for (int i = 0; i < CountriesList.Items.Count; i++)
+                for (int i = 0; i < 27; i++)
                 {
+                    MemberStatesVote.Maximum++;
+                    Countries[i].present = true;
+                    UpdateVoteBars();
                     CountriesList.SetItemChecked(i, true);
                 }
             }
             howToggle = false;
             count = 0;
-            countparticipants();
         }
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
         {
@@ -515,16 +541,148 @@ namespace EuroCalculator
         }
         private void Form1_Load(object sender, EventArgs e)
         {
-            countparticipants();
+            UpdateVoteBars();
             InitialiseCountries();
         }
         private void CountriesList_SelectedIndexChanged(object sender, EventArgs e)
         {
-            countparticipants();
+            Countries[CountriesList.SelectedIndex].present = CountriesList.GetItemChecked(CountriesList.SelectedIndex);
+            UpdateVoteBars();
         }
         private void AusVote_Scroll(object sender, EventArgs e)
         {
-
+            Aus.vote = AusVote.Value;
+            UpdateVoteBars();
+        }
+        private void BelVote_Scroll(object sender, EventArgs e)
+        {
+            Bel.vote = BelVote.Value;
+            UpdateVoteBars();
+        }
+        private void BulVote_Scroll(object sender, EventArgs e)
+        {
+            Bul.vote = BulVote.Value;
+            UpdateVoteBars();
+        }
+        private void CroVote_Scroll(object sender, EventArgs e)
+        {
+            Cro.vote = CroVote.Value;
+            UpdateVoteBars();
+        }
+        private void CypVote_Scroll(object sender, EventArgs e)
+        {
+            Cyp.vote = CypVote.Value;
+            UpdateVoteBars();
+        }
+        private void CzeVote_Scroll(object sender, EventArgs e)
+        {
+            Cze.vote = CzeVote.Value;
+            UpdateVoteBars();
+        }
+        private void DenVote_Scroll(object sender, EventArgs e)
+        {
+            Den.vote = DenVote.Value;
+            UpdateVoteBars();
+        }
+        private void EstVote_Scroll(object sender, EventArgs e)
+        {
+            Est.vote = EstVote.Value;
+            UpdateVoteBars();
+        }
+        private void FinVote_Scroll(object sender, EventArgs e)
+        {
+            Fin.vote = FinVote.Value;
+            UpdateVoteBars();
+        }
+        private void FraVote_Scroll(object sender, EventArgs e)
+        {
+            Fra.vote = FraVote.Value;
+            UpdateVoteBars();
+        }
+        private void GerVote_Scroll(object sender, EventArgs e)
+        {
+            Ger.vote = GerVote.Value;
+            UpdateVoteBars();
+        }
+        private void GreVote_Scroll(object sender, EventArgs e)
+        {
+            Gre.vote = GreVote.Value;
+            UpdateVoteBars();
+        }
+        private void HunVote_Scroll(object sender, EventArgs e)
+        {
+            Hun.vote = HunVote.Value;
+            UpdateVoteBars();
+        }
+        private void IreVote_Scroll(object sender, EventArgs e)
+        {
+            Ire.vote = IreVote.Value;
+            UpdateVoteBars();
+        }
+        private void ItaVote_Scroll(object sender, EventArgs e)
+        {
+            Ita.vote = ItaVote.Value;
+            UpdateVoteBars();
+        }
+        private void LatVote_Scroll(object sender, EventArgs e)
+        {
+            Lat.vote = LatVote.Value;
+            UpdateVoteBars();
+        }
+        private void LitVote_Scroll(object sender, EventArgs e)
+        {
+            Lit.vote = LitVote.Value;
+            UpdateVoteBars();
+        }
+        private void LuxVote_Scroll(object sender, EventArgs e)
+        {
+            Lux.vote = LuxVote.Value;
+            UpdateVoteBars();
+        }
+        private void MalVote_Scroll(object sender, EventArgs e)
+        {
+            Mal.vote = MalVote.Value;
+            UpdateVoteBars();
+        }
+        private void NetVote_Scroll(object sender, EventArgs e)
+        {
+            Net.vote = NetVote.Value;
+            UpdateVoteBars();
+        }
+        private void PolVote_Scroll(object sender, EventArgs e)
+        {
+            Pol.vote = PolVote.Value;
+            UpdateVoteBars();
+        }
+        private void PorVote_Scroll(object sender, EventArgs e)
+        {
+            Por.vote = PorVote.Value;
+            UpdateVoteBars();
+        }
+        private void RomVote_Scroll(object sender, EventArgs e)
+        {
+            Rom.vote = RomVote.Value;
+            UpdateVoteBars();
+        }
+        private void SlkVote_Scroll(object sender, EventArgs e)
+        {
+            Slk.vote = SlkVote.Value;
+            UpdateVoteBars();
+        }
+        private void SlnVote_Scroll(object sender, EventArgs e)
+        {
+            Sln.vote = SlnVote.Value;
+            UpdateVoteBars();
+        }
+        private void SpaVote_Scroll(object sender, EventArgs e)
+        {
+            Spa.vote = SpaVote.Value;
+            UpdateVoteBars();
+        }
+        private void SweVote_Scroll(object sender, EventArgs e)
+        {
+            Swe.vote = SweVote.Value;
+            UpdateVoteBars();
         }
     }
 

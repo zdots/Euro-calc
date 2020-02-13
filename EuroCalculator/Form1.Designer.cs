@@ -166,7 +166,7 @@
             // 
             this.MemberStatesVote.Location = new System.Drawing.Point(670, 145);
             this.MemberStatesVote.MarqueeAnimationSpeed = 0;
-            this.MemberStatesVote.Maximum = 27;
+            this.MemberStatesVote.Maximum = 0;
             this.MemberStatesVote.Name = "MemberStatesVote";
             this.MemberStatesVote.Size = new System.Drawing.Size(118, 23);
             this.MemberStatesVote.Style = System.Windows.Forms.ProgressBarStyle.Continuous;
@@ -194,6 +194,7 @@
             this.BelVote.Size = new System.Drawing.Size(201, 18);
             this.BelVote.TabIndex = 8;
             this.BelVote.Value = 2;
+            this.BelVote.Scroll += new System.EventHandler(this.BelVote_Scroll);
             // 
             // CroVote
             // 
@@ -205,6 +206,7 @@
             this.CroVote.Size = new System.Drawing.Size(201, 18);
             this.CroVote.TabIndex = 10;
             this.CroVote.Value = 2;
+            this.CroVote.Scroll += new System.EventHandler(this.CroVote_Scroll);
             // 
             // BulVote
             // 
@@ -216,6 +218,7 @@
             this.BulVote.Size = new System.Drawing.Size(201, 18);
             this.BulVote.TabIndex = 9;
             this.BulVote.Value = 2;
+            this.BulVote.Scroll += new System.EventHandler(this.BulVote_Scroll);
             // 
             // EstVote
             // 
@@ -227,6 +230,7 @@
             this.EstVote.Size = new System.Drawing.Size(201, 18);
             this.EstVote.TabIndex = 14;
             this.EstVote.Value = 2;
+            this.EstVote.Scroll += new System.EventHandler(this.EstVote_Scroll);
             // 
             // DenVote
             // 
@@ -238,6 +242,7 @@
             this.DenVote.Size = new System.Drawing.Size(201, 18);
             this.DenVote.TabIndex = 13;
             this.DenVote.Value = 2;
+            this.DenVote.Scroll += new System.EventHandler(this.DenVote_Scroll);
             // 
             // CzeVote
             // 
@@ -249,6 +254,7 @@
             this.CzeVote.Size = new System.Drawing.Size(201, 18);
             this.CzeVote.TabIndex = 12;
             this.CzeVote.Value = 2;
+            this.CzeVote.Scroll += new System.EventHandler(this.CzeVote_Scroll);
             // 
             // CypVote
             // 
@@ -260,6 +266,7 @@
             this.CypVote.Size = new System.Drawing.Size(201, 18);
             this.CypVote.TabIndex = 11;
             this.CypVote.Value = 2;
+            this.CypVote.Scroll += new System.EventHandler(this.CypVote_Scroll);
             // 
             // LatVote
             // 
@@ -271,6 +278,7 @@
             this.LatVote.Size = new System.Drawing.Size(201, 18);
             this.LatVote.TabIndex = 22;
             this.LatVote.Value = 2;
+            this.LatVote.Scroll += new System.EventHandler(this.LatVote_Scroll);
             // 
             // ItaVote
             // 
@@ -282,6 +290,7 @@
             this.ItaVote.Size = new System.Drawing.Size(201, 18);
             this.ItaVote.TabIndex = 21;
             this.ItaVote.Value = 2;
+            this.ItaVote.Scroll += new System.EventHandler(this.ItaVote_Scroll);
             // 
             // IreVote
             // 
@@ -293,6 +302,7 @@
             this.IreVote.Size = new System.Drawing.Size(201, 18);
             this.IreVote.TabIndex = 20;
             this.IreVote.Value = 2;
+            this.IreVote.Scroll += new System.EventHandler(this.IreVote_Scroll);
             // 
             // HunVote
             // 
@@ -304,6 +314,7 @@
             this.HunVote.Size = new System.Drawing.Size(201, 18);
             this.HunVote.TabIndex = 19;
             this.HunVote.Value = 2;
+            this.HunVote.Scroll += new System.EventHandler(this.HunVote_Scroll);
             // 
             // GreVote
             // 
@@ -315,6 +326,7 @@
             this.GreVote.Size = new System.Drawing.Size(201, 18);
             this.GreVote.TabIndex = 18;
             this.GreVote.Value = 2;
+            this.GreVote.Scroll += new System.EventHandler(this.GreVote_Scroll);
             // 
             // GerVote
             // 
@@ -326,6 +338,7 @@
             this.GerVote.Size = new System.Drawing.Size(201, 18);
             this.GerVote.TabIndex = 17;
             this.GerVote.Value = 2;
+            this.GerVote.Scroll += new System.EventHandler(this.GerVote_Scroll);
             // 
             // FraVote
             // 
@@ -337,6 +350,7 @@
             this.FraVote.Size = new System.Drawing.Size(201, 18);
             this.FraVote.TabIndex = 16;
             this.FraVote.Value = 2;
+            this.FraVote.Scroll += new System.EventHandler(this.FraVote_Scroll);
             // 
             // FinVote
             // 
@@ -348,6 +362,7 @@
             this.FinVote.Size = new System.Drawing.Size(201, 18);
             this.FinVote.TabIndex = 15;
             this.FinVote.Value = 2;
+            this.FinVote.Scroll += new System.EventHandler(this.FinVote_Scroll);
             // 
             // SweVote
             // 
@@ -359,6 +374,7 @@
             this.SweVote.Size = new System.Drawing.Size(201, 18);
             this.SweVote.TabIndex = 33;
             this.SweVote.Value = 2;
+            this.SweVote.Scroll += new System.EventHandler(this.SweVote_Scroll);
             // 
             // SpaVote
             // 
@@ -370,6 +386,7 @@
             this.SpaVote.Size = new System.Drawing.Size(201, 18);
             this.SpaVote.TabIndex = 32;
             this.SpaVote.Value = 2;
+            this.SpaVote.Scroll += new System.EventHandler(this.SpaVote_Scroll);
             // 
             // SlnVote
             // 
@@ -381,6 +398,7 @@
             this.SlnVote.Size = new System.Drawing.Size(201, 18);
             this.SlnVote.TabIndex = 31;
             this.SlnVote.Value = 2;
+            this.SlnVote.Scroll += new System.EventHandler(this.SlnVote_Scroll);
             // 
             // SlkVote
             // 
@@ -392,6 +410,7 @@
             this.SlkVote.Size = new System.Drawing.Size(201, 18);
             this.SlkVote.TabIndex = 30;
             this.SlkVote.Value = 2;
+            this.SlkVote.Scroll += new System.EventHandler(this.SlkVote_Scroll);
             // 
             // RomVote
             // 
@@ -403,6 +422,7 @@
             this.RomVote.Size = new System.Drawing.Size(201, 18);
             this.RomVote.TabIndex = 29;
             this.RomVote.Value = 2;
+            this.RomVote.Scroll += new System.EventHandler(this.RomVote_Scroll);
             // 
             // PorVote
             // 
@@ -414,6 +434,7 @@
             this.PorVote.Size = new System.Drawing.Size(201, 18);
             this.PorVote.TabIndex = 28;
             this.PorVote.Value = 2;
+            this.PorVote.Scroll += new System.EventHandler(this.PorVote_Scroll);
             // 
             // PolVote
             // 
@@ -425,6 +446,7 @@
             this.PolVote.Size = new System.Drawing.Size(201, 18);
             this.PolVote.TabIndex = 27;
             this.PolVote.Value = 2;
+            this.PolVote.Scroll += new System.EventHandler(this.PolVote_Scroll);
             // 
             // NetVote
             // 
@@ -436,6 +458,7 @@
             this.NetVote.Size = new System.Drawing.Size(201, 18);
             this.NetVote.TabIndex = 26;
             this.NetVote.Value = 2;
+            this.NetVote.Scroll += new System.EventHandler(this.NetVote_Scroll);
             // 
             // MalVote
             // 
@@ -447,6 +470,7 @@
             this.MalVote.Size = new System.Drawing.Size(201, 18);
             this.MalVote.TabIndex = 25;
             this.MalVote.Value = 2;
+            this.MalVote.Scroll += new System.EventHandler(this.MalVote_Scroll);
             // 
             // LuxVote
             // 
@@ -458,6 +482,7 @@
             this.LuxVote.Size = new System.Drawing.Size(201, 18);
             this.LuxVote.TabIndex = 24;
             this.LuxVote.Value = 2;
+            this.LuxVote.Scroll += new System.EventHandler(this.LuxVote_Scroll);
             // 
             // LitVote
             // 
@@ -469,6 +494,7 @@
             this.LitVote.Size = new System.Drawing.Size(201, 18);
             this.LitVote.TabIndex = 23;
             this.LitVote.Value = 2;
+            this.LitVote.Scroll += new System.EventHandler(this.LitVote_Scroll);
             // 
             // ParticipatingStates
             // 
