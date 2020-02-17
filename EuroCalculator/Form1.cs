@@ -740,6 +740,7 @@ namespace EuroCalculator
         public bool eurozonemember = false;
         public bool present = false;
         public int vote = 2;
+        public double votingpopulation = 0.00;
     }
 
     public class Voting
