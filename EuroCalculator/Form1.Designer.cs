@@ -73,6 +73,10 @@
             this.VoteAbstainNumber = new System.Windows.Forms.Label();
             this.PassedFailed = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.CVoteNeeded = new System.Windows.Forms.Label();
+            this.PVoteNeeded = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.AusVote)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BelVote)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CroVote)).BeginInit();
@@ -633,11 +637,51 @@
             this.label5.TabIndex = 48;
             this.label5.Text = "Voting Type:";
             // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(576, 98);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(116, 13);
+            this.label6.TabIndex = 49;
+            this.label6.Text = "States needed to pass:";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(556, 111);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(136, 13);
+            this.label7.TabIndex = 50;
+            this.label7.Text = "Population needed to pass:";
+            // 
+            // CVoteNeeded
+            // 
+            this.CVoteNeeded.AutoSize = true;
+            this.CVoteNeeded.Location = new System.Drawing.Point(698, 98);
+            this.CVoteNeeded.Name = "CVoteNeeded";
+            this.CVoteNeeded.Size = new System.Drawing.Size(27, 13);
+            this.CVoteNeeded.TabIndex = 51;
+            this.CVoteNeeded.Text = "N/A";
+            // 
+            // PVoteNeeded
+            // 
+            this.PVoteNeeded.AutoSize = true;
+            this.PVoteNeeded.Location = new System.Drawing.Point(698, 111);
+            this.PVoteNeeded.Name = "PVoteNeeded";
+            this.PVoteNeeded.Size = new System.Drawing.Size(27, 13);
+            this.PVoteNeeded.TabIndex = 52;
+            this.PVoteNeeded.Text = "N/A";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(806, 564);
+            this.Controls.Add(this.PVoteNeeded);
+            this.Controls.Add(this.CVoteNeeded);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.PassedFailed);
             this.Controls.Add(this.VoteAbstainNumber);
@@ -767,6 +811,10 @@
         private System.Windows.Forms.Label VoteAbstainNumber;
         private System.Windows.Forms.Label PassedFailed;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label CVoteNeeded;
+        private System.Windows.Forms.Label PVoteNeeded;
     }
 }
 

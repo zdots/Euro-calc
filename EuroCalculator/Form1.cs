@@ -267,38 +267,38 @@ namespace EuroCalculator
         private int votesYes = 0;
         private int votesNo = 0;
         private int votesAbstain = 0;
-        public static Country Aus = new Country("Austria", 1.98, true) { };
-        public static Country Bel = new Country("Belgium", 2.56, true) { };
-        public static Country Bul = new Country("Bulgaria", 1.56, false) { };
-        public static Country Cro = new Country ("Croatia", 0.91, false) { };
-        public static Country Cyp = new Country ("Cyprus", 0.20, true) { };
-        public static Country Cze = new Country ("Czech Republic", 2.35, true) { };
-        public static Country Den = new Country ("Denmark", 1.30, true) { };
-        public static Country Est = new Country ("Estonia", 0.30, true) { };
-        public static Country Fin = new Country ("Finland", 1.23, true) { };
-        public static Country Fra = new Country ("France", 14.98, true) { };
-        public static Country Ger = new Country ("Germany", 18.54, true) { };
-        public static Country Gre = new Country ("Greece", 2.40, true) { };
-        public static Country Hun = new Country ("Hungary", 2.18, true) { };
-        public static Country Ire = new Country ("Ireland", 1.10, true) { };
-        public static Country Ita = new Country ("Italy", 13.65, true) { };
-        public static Country Lat = new Country ("Latvia", 0.43, true) { };
-        public static Country Lit = new Country ("Lithuania", 0.62, true) { };
-        public static Country Lux = new Country ("Luxembourg", 0.14, true) { };
-        public static Country Mal = new Country ("Malta", 0.11, true) { };
-        public static Country Net = new Country ("Netherlands", 3.89, true) { };
-        public static Country Pol = new Country ("Poland", 8.49, true) { };
-        public static Country Por = new Country ("Portugal", 2.30, true) { };
-        public static Country Rom = new Country ("Romania", 4.34, true) { };
-        public static Country Slk = new Country ("Slovakia", 1.22, true) { };
-        public static Country Sln = new Country ("Slovenia", 0.47, true) { };
-        public static Country Spa = new Country ("Spain", 10.49, true) { };
-        public static Country Swe = new Country ("Sweden", 2.29, true) { };
+        public static Country Aus = new Country("Austria", 1.98, true) ;
+        public static Country Bel = new Country("Belgium", 2.56, true) ;
+        public static Country Bul = new Country("Bulgaria", 1.56, false) ;
+        public static Country Cro = new Country ("Croatia", 0.91, false) ;
+        public static Country Cyp = new Country ("Cyprus", 0.20, true) ;
+        public static Country Cze = new Country ("Czech Republic", 2.35, true) ;
+        public static Country Den = new Country ("Denmark", 1.30, true) ;
+        public static Country Est = new Country ("Estonia", 0.30, true) ;
+        public static Country Fin = new Country ("Finland", 1.23, true) ;
+        public static Country Fra = new Country ("France", 14.98, true) ;
+        public static Country Ger = new Country ("Germany", 18.54, true) ;
+        public static Country Gre = new Country ("Greece", 2.40, true) ;
+        public static Country Hun = new Country ("Hungary", 2.18, true) ;
+        public static Country Ire = new Country ("Ireland", 1.10, true) ;
+        public static Country Ita = new Country ("Italy", 13.65, true) ;
+        public static Country Lat = new Country ("Latvia", 0.43, true) ;
+        public static Country Lit = new Country ("Lithuania", 0.62, true) ;
+        public static Country Lux = new Country ("Luxembourg", 0.14, true) ;
+        public static Country Mal = new Country ("Malta", 0.11, true) ;
+        public static Country Net = new Country ("Netherlands", 3.89, true) ;
+        public static Country Pol = new Country ("Poland", 8.49, true) ;
+        public static Country Por = new Country ("Portugal", 2.30, true) ;
+        public static Country Rom = new Country ("Romania", 4.34, true) ;
+        public static Country Slk = new Country ("Slovakia", 1.22, true) ;
+        public static Country Sln = new Country ("Slovenia", 0.47, true) ;
+        public static Country Spa = new Country ("Spain", 10.49, true) ;
+        public static Country Swe = new Country ("Sweden", 2.29, true) ;
         public static Country[] Countries = { Aus, Bel, Bul, Cro, Cyp, Cze, Den, Est, Fin, Fra, Ger, Gre, Hun, Ire, Ita, Lat, Lit, Lux, Mal, Net, Pol, Por, Rom, Slk, Sln, Spa, Swe };
-        public static Voting QualifiedMajority = new Voting{CountryVoteNeeded = 55.0,PercentVoteNeeded = 65.0,VoteName = "Qualified Majority"};
-        public static Voting ReinforcedQualifiedMajority = new Voting { CountryVoteNeeded = 72.0, PercentVoteNeeded = 65.0, VoteName = "Reinforced Qualified Majority" };
-        public static Voting SimpleMajority = new Voting { CountryVoteNeeded = 50.0, PercentVoteNeeded = 0.0, VoteName = "Simple Majority" };
-        public static Voting Unanimity = new Voting { CountryVoteNeeded = 100.0, PercentVoteNeeded = 0.0, VoteName = "Unanimity" };
+        public static Voting QualifiedMajority = new Voting("Qualified Majority", 55.0, 65.0);
+        public static Voting ReinforcedQualifiedMajority = new Voting("Reinforced Qualified Majority", 72.0, 65.0);
+        public static Voting SimpleMajority = new Voting("Simple Majority", 50.0, 0.0);
+        public static Voting Unanimity = new Voting("Unanimity", 100.0, 0.0);
         public static Voting[] VoteTypes = { QualifiedMajority, ReinforcedQualifiedMajority, SimpleMajority, Unanimity };
         public double VoteNeeded = 0.0;
 
@@ -327,6 +327,11 @@ namespace EuroCalculator
         }
         private void UpdateVoteBars()
         {
+            try
+            {
+                CVoteNeeded.Text = $"{VoteTypes[VoteType.SelectedIndex].getCVote()}% {(VoteTypes[VoteType.SelectedIndex].getCVote() / 100) * MemberStatesVote.Maximum}";
+                PVoteNeeded.Text = $"{VoteTypes[VoteType.SelectedIndex].getPVote()}%";
+            } catch { }
             // This function is called whenever a slider or tickbox changes state. It updates the vote bar.
             votesYes = 0;
             votesNo = 0;
@@ -554,7 +559,7 @@ namespace EuroCalculator
 
         private void VoteType_SelectedIndexChanged(object sender, EventArgs e)
         {
-            VoteNeeded = VoteTypes[VoteType.SelectedIndex].CountryVoteNeeded;
+            VoteNeeded = VoteTypes[VoteType.SelectedIndex].getCVote();
             UpdateVoteBars();
         }
     }
