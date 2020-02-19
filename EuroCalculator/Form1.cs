@@ -264,9 +264,6 @@ namespace EuroCalculator
         }
         private bool howToggle = false;
         private int count = 0;
-        private int votesYes = 0;
-        private int votesNo = 0;
-        private int votesAbstain = 0;
         public static Country Aus = new Country("Austria", 1.98, true) ;
         public static Country Bel = new Country("Belgium", 2.56, true) ;
         public static Country Bul = new Country("Bulgaria", 1.56, false) ;
@@ -301,18 +298,34 @@ namespace EuroCalculator
         public static Voting Unanimity = new Voting("Unanimity", 100.0, 0.0);
         public static Voting[] VoteTypes = { QualifiedMajority, ReinforcedQualifiedMajority, SimpleMajority, Unanimity };
         public double VoteNeeded = 0.0;
+        public double PopVoteNeeded = 0.0;
 
-        public void HasPassed()
+        public void HasPassed(int votesNo)
         {
             // This function calculates whether or not the vote has passed based on the values of the MemberStatesVote bar's value and maximum.
             if (VoteNeeded != 0.0)
             {
+                BlockedMinority.Text = "";
+                bool BlockingMinority = false;
                 if (MemberStatesVote.Maximum > 0)
                 {
-                    // The number "55" can be replaced with the percentage required based on the voting type. This is a placeholder value.
                     if (((double)MemberStatesVote.Value / (double)MemberStatesVote.Maximum) * 100 >= VoteNeeded)
                     {
-                        PassedFailed.Text = "Passed";
+                        if (((double)PopulationVote.Value / (double)PopulationVote.Maximum) * 100 < PopVoteNeeded && votesNo > 3)
+                        {
+                            PassedFailed.Text = "Failed";
+                        }
+                        else if (((double)PopulationVote.Value / (double)PopulationVote.Maximum) * 100 < PopVoteNeeded && votesNo <= 3)
+                        {
+                            PassedFailed.Text = "Passed";
+                            BlockedMinority.Text = "Blocking Minority";
+                        }
+                        else
+                        {
+                            PassedFailed.Text = "Passed";
+                        }
+
+
                     }
                     else
                     {
@@ -333,30 +346,40 @@ namespace EuroCalculator
                 PVoteNeeded.Text = $"{VoteTypes[VoteType.SelectedIndex].getPVote()}%";
             } catch { }
             // This function is called whenever a slider or tickbox changes state. It updates the vote bar.
-            votesYes = 0;
-            votesNo = 0;
-            votesAbstain = 0;
+            int votesYes = 0;
+            double popVotesYes = 0.0;
+            int votesNo = 0;
+            double popVotesNo = 0.0;
+            int votesAbstain = 0;
+            double popVotesAbstain = 0.0;
             MemberStatesVote.Maximum = 0;
+            PopulationVote.Maximum = 0;
             MemberStatesVote.Value = 0;
+            PopulationVote.Value = 0;
             for (int i = 0; i < 27; i++)
             {
                 if (Countries[i].getPresent() == true)
                 {
                     MemberStatesVote.Maximum++;
+                    PopulationVote.Maximum = (int)((double)PopulationVote.Maximum + (Countries[i].getPop() * 100));
                     // For each country that has present set as true, the maximum value for the bar is increased.
                     if (Countries[i].getVote() == 2)
                     {
                         MemberStatesVote.Value++;
+                        PopulationVote.Value = (int)((double)PopulationVote.Value + (Countries[i].getPop()*100));
                         votesYes++;
+                        popVotesYes = popVotesYes + Countries[i].getPop();
                         // For each country that has present set as true, and has voted "yes", the value for the bar is increased.
                     }
                     else if (Countries[i].getVote() == 1)
                     {
                         votesNo++;
+                        popVotesNo = popVotesNo + Countries[i].getPop();
                     }
                     else if (Countries[i].getVote() == 0)
                     {
                         votesAbstain++;
+                        popVotesAbstain = popVotesAbstain + Countries[i].getPop();
                     }
                 }
                 
@@ -364,9 +387,12 @@ namespace EuroCalculator
                 // The text informing the user of how many states have participated is updated based on the maximum value of the bar. This is useful for debugging as well.
             }
             VoteYesNumber.Text = $"{votesYes}";
+            PopVoteYesNumber.Text = $"{Math.Round(((popVotesYes*100)/ PopulationVote.Maximum)*100, 2)}";
             VoteNoNumber.Text = $"{votesNo}";
+            PopVoteNoNumber.Text = $"{Math.Round(((popVotesNo * 100) / PopulationVote.Maximum) * 100, 2)}";
             VoteAbstainNumber.Text = $"{votesAbstain}";
-            HasPassed();
+            PopVoteAbstainNumber.Text = $"{Math.Round(((popVotesAbstain * 100) / PopulationVote.Maximum) * 100, 2)}";
+            HasPassed(votesNo + votesAbstain);
             // The function calls HasPassed to check if the vote has passed or failed.
         }
         private void AllCountries_CheckedChanged(object sender, EventArgs e)
@@ -560,6 +586,7 @@ namespace EuroCalculator
         private void VoteType_SelectedIndexChanged(object sender, EventArgs e)
         {
             VoteNeeded = VoteTypes[VoteType.SelectedIndex].getCVote();
+            PopVoteNeeded = VoteTypes[VoteType.SelectedIndex].getPVote();
             UpdateVoteBars();
         }
     }

@@ -23,6 +23,7 @@ namespace EuroCalculator
         }
         public int getVote() { return vote; }
         public void setVote(int changedVote) { vote = changedVote; }
+        public double getPop() { return CPop; }
         public bool getPresent() { return present; }
         public void setPresent(bool changedPresent) { present = changedPresent; }
     }

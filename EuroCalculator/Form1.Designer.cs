@@ -77,6 +77,14 @@
             this.label7 = new System.Windows.Forms.Label();
             this.CVoteNeeded = new System.Windows.Forms.Label();
             this.PVoteNeeded = new System.Windows.Forms.Label();
+            this.PopulationVote = new System.Windows.Forms.ProgressBar();
+            this.PopVoteYesNumber = new System.Windows.Forms.Label();
+            this.PopVoteNoNumber = new System.Windows.Forms.Label();
+            this.PopVoteAbstainNumber = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.BlockedMinority = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.AusVote)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BelVote)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CroVote)).BeginInit();
@@ -673,11 +681,93 @@
             this.PVoteNeeded.TabIndex = 52;
             this.PVoteNeeded.Text = "N/A";
             // 
+            // PopulationVote
+            // 
+            this.PopulationVote.Location = new System.Drawing.Point(670, 231);
+            this.PopulationVote.MarqueeAnimationSpeed = 0;
+            this.PopulationVote.Maximum = 0;
+            this.PopulationVote.Name = "PopulationVote";
+            this.PopulationVote.Size = new System.Drawing.Size(118, 23);
+            this.PopulationVote.Style = System.Windows.Forms.ProgressBarStyle.Continuous;
+            this.PopulationVote.TabIndex = 53;
+            // 
+            // PopVoteYesNumber
+            // 
+            this.PopVoteYesNumber.AutoSize = true;
+            this.PopVoteYesNumber.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.PopVoteYesNumber.Location = new System.Drawing.Point(670, 269);
+            this.PopVoteYesNumber.Name = "PopVoteYesNumber";
+            this.PopVoteYesNumber.Size = new System.Drawing.Size(19, 13);
+            this.PopVoteYesNumber.TabIndex = 54;
+            this.PopVoteYesNumber.Text = "27";
+            // 
+            // PopVoteNoNumber
+            // 
+            this.PopVoteNoNumber.AutoSize = true;
+            this.PopVoteNoNumber.ForeColor = System.Drawing.Color.Red;
+            this.PopVoteNoNumber.Location = new System.Drawing.Point(713, 269);
+            this.PopVoteNoNumber.Name = "PopVoteNoNumber";
+            this.PopVoteNoNumber.Size = new System.Drawing.Size(13, 13);
+            this.PopVoteNoNumber.TabIndex = 55;
+            this.PopVoteNoNumber.Text = "0";
+            // 
+            // PopVoteAbstainNumber
+            // 
+            this.PopVoteAbstainNumber.AutoSize = true;
+            this.PopVoteAbstainNumber.Location = new System.Drawing.Point(762, 269);
+            this.PopVoteAbstainNumber.Name = "PopVoteAbstainNumber";
+            this.PopVoteAbstainNumber.Size = new System.Drawing.Size(13, 13);
+            this.PopVoteAbstainNumber.TabIndex = 56;
+            this.PopVoteAbstainNumber.Text = "0";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(667, 293);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(25, 13);
+            this.label11.TabIndex = 57;
+            this.label11.Text = "Yes";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(709, 293);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(21, 13);
+            this.label12.TabIndex = 58;
+            this.label12.Text = "No";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(749, 293);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(42, 13);
+            this.label13.TabIndex = 59;
+            this.label13.Text = "Abstain";
+            // 
+            // BlockedMinority
+            // 
+            this.BlockedMinority.AutoSize = true;
+            this.BlockedMinority.Location = new System.Drawing.Point(670, 326);
+            this.BlockedMinority.Name = "BlockedMinority";
+            this.BlockedMinority.Size = new System.Drawing.Size(0, 13);
+            this.BlockedMinority.TabIndex = 60;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(806, 564);
+            this.Controls.Add(this.BlockedMinority);
+            this.Controls.Add(this.label13);
+            this.Controls.Add(this.label12);
+            this.Controls.Add(this.label11);
+            this.Controls.Add(this.PopVoteAbstainNumber);
+            this.Controls.Add(this.PopVoteNoNumber);
+            this.Controls.Add(this.PopVoteYesNumber);
+            this.Controls.Add(this.PopulationVote);
             this.Controls.Add(this.PVoteNeeded);
             this.Controls.Add(this.CVoteNeeded);
             this.Controls.Add(this.label7);
@@ -815,6 +905,14 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label CVoteNeeded;
         private System.Windows.Forms.Label PVoteNeeded;
+        private System.Windows.Forms.ProgressBar PopulationVote;
+        private System.Windows.Forms.Label PopVoteYesNumber;
+        private System.Windows.Forms.Label PopVoteNoNumber;
+        private System.Windows.Forms.Label PopVoteAbstainNumber;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label BlockedMinority;
     }
 }
 
