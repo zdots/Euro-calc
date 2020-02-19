@@ -269,14 +269,14 @@ namespace EuroCalculator
         public static Country Bul = new Country("Bulgaria", 1.56, false) ;
         public static Country Cro = new Country ("Croatia", 0.91, false) ;
         public static Country Cyp = new Country ("Cyprus", 0.20, true) ;
-        public static Country Cze = new Country ("Czech Republic", 2.35, true) ;
-        public static Country Den = new Country ("Denmark", 1.30, true) ;
+        public static Country Cze = new Country ("Czech Republic", 2.35, false) ;
+        public static Country Den = new Country ("Denmark", 1.30, false) ;
         public static Country Est = new Country ("Estonia", 0.30, true) ;
         public static Country Fin = new Country ("Finland", 1.23, true) ;
         public static Country Fra = new Country ("France", 14.98, true) ;
         public static Country Ger = new Country ("Germany", 18.54, true) ;
         public static Country Gre = new Country ("Greece", 2.40, true) ;
-        public static Country Hun = new Country ("Hungary", 2.18, true) ;
+        public static Country Hun = new Country ("Hungary", 2.18, false) ;
         public static Country Ire = new Country ("Ireland", 1.10, true) ;
         public static Country Ita = new Country ("Italy", 13.65, true) ;
         public static Country Lat = new Country ("Latvia", 0.43, true) ;
@@ -284,13 +284,13 @@ namespace EuroCalculator
         public static Country Lux = new Country ("Luxembourg", 0.14, true) ;
         public static Country Mal = new Country ("Malta", 0.11, true) ;
         public static Country Net = new Country ("Netherlands", 3.89, true) ;
-        public static Country Pol = new Country ("Poland", 8.49, true) ;
+        public static Country Pol = new Country ("Poland", 8.49, false) ;
         public static Country Por = new Country ("Portugal", 2.30, true) ;
-        public static Country Rom = new Country ("Romania", 4.34, true) ;
+        public static Country Rom = new Country ("Romania", 4.34, false) ;
         public static Country Slk = new Country ("Slovakia", 1.22, true) ;
         public static Country Sln = new Country ("Slovenia", 0.47, true) ;
         public static Country Spa = new Country ("Spain", 10.49, true) ;
-        public static Country Swe = new Country ("Sweden", 2.29, true) ;
+        public static Country Swe = new Country ("Sweden", 2.29, false) ;
         public static Country[] Countries = { Aus, Bel, Bul, Cro, Cyp, Cze, Den, Est, Fin, Fra, Ger, Gre, Hun, Ire, Ita, Lat, Lit, Lux, Mal, Net, Pol, Por, Rom, Slk, Sln, Spa, Swe };
         public static Voting QualifiedMajority = new Voting("Qualified Majority", 55.0, 65.0);
         public static Voting ReinforcedQualifiedMajority = new Voting("Reinforced Qualified Majority", 72.0, 65.0);
@@ -398,6 +398,7 @@ namespace EuroCalculator
         private void AllCountries_CheckedChanged(object sender, EventArgs e)
         {
             // This function handles the "all countries participating" checkbox.
+            EurozoneOnly.Checked = false;
             for (int i = 0; i < 27;i++)
             {
                 if(CountriesList.GetItemChecked(i) == true)
@@ -437,6 +438,7 @@ namespace EuroCalculator
         }
         private void CountriesList_SelectedIndexChanged(object sender, EventArgs e)
         {
+            EurozoneOnly.Checked = false;
             Countries[CountriesList.SelectedIndex].setPresent(CountriesList.GetItemChecked(CountriesList.SelectedIndex));
             UpdateVoteBars();
             // When a checkbox is changed, this function changes the state of that countrys participation in it's instance, and then updates the vote bar.
@@ -578,15 +580,31 @@ namespace EuroCalculator
         }
         // All of these countries functions update their instances vote state, and call the function to update the vote bar.
 
-        private void EurozoneOnly_CheckedChanged(object sender, EventArgs e)
-        {
-            // Unfinished.
-        }
+
 
         private void VoteType_SelectedIndexChanged(object sender, EventArgs e)
         {
             VoteNeeded = VoteTypes[VoteType.SelectedIndex].getCVote();
             PopVoteNeeded = VoteTypes[VoteType.SelectedIndex].getPVote();
+            UpdateVoteBars();
+        }
+
+        private void EurozoneOnly_CheckedChanged(object sender, EventArgs e)
+        {
+            EurozoneOnly.Checked = true;
+            for (int i = 0; i < 27; i++)
+            {
+                if (Countries[i].getEZMember() == true)
+                {
+                    Countries[i].setPresent(true);
+                    CountriesList.SetItemChecked(i, true);
+                }
+                else
+                {
+                    Countries[i].setPresent(false);
+                    CountriesList.SetItemChecked(i, false);
+                }
+            }
             UpdateVoteBars();
         }
     }

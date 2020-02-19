@@ -21,6 +21,7 @@ namespace EuroCalculator
             CPop = population;
             eurozoneMember = ezMember;
         }
+        public bool getEZMember() { return eurozoneMember; }
         public int getVote() { return vote; }
         public void setVote(int changedVote) { vote = changedVote; }
         public double getPop() { return CPop; }
