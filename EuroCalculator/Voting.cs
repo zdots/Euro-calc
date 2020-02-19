@@ -22,5 +22,34 @@ namespace EuroCalculator
         public double getPVote() { return PercentVoteNeeded; }
         public void setCVote(double countryVote) { CountryVoteNeeded = countryVote; }
         public void setPVote(double populationVote) { PercentVoteNeeded = populationVote; }
+
+        public bool VoteResult(double MemberVotesYes, double MemberVotesParticipating, double memberVotesNeeded, double PopulationVotesYes, double PopulationParticipating, double PopulationVotesNeeded, int VotesNo)
+        {
+            bool result;
+                if ((MemberVotesYes / MemberVotesParticipating) * 100 >= memberVotesNeeded)
+                {
+                    if ((PopulationVotesYes / PopulationParticipating) * 100 < PopulationVotesNeeded && VotesNo > 3)
+                    {
+                    result = false;
+                    }
+                    else if ((PopulationVotesYes / PopulationParticipating) * 100 < PopulationVotesNeeded && VotesNo <= 3)
+                    {
+                    result = true;
+                    }
+                    else
+                    {
+                    result = true;
+                }
+
+
+                }
+                else
+                {
+                result = false;
+            }
+            return result;
+        }
+
+        
     }
 }
