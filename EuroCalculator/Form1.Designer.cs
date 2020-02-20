@@ -819,7 +819,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.WindowText;
+            this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(1209, 868);
             this.Controls.Add(this.BlockedMinority);
             this.Controls.Add(this.label13);
@@ -878,7 +878,7 @@
             this.Controls.Add(this.CountriesList);
             this.Controls.Add(this.AllCountries);
             this.Controls.Add(this.EurozoneOnly);
-            this.ForeColor = System.Drawing.SystemColors.HighlightText;
+            this.ForeColor = System.Drawing.Color.White;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "Form1";
