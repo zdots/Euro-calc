@@ -306,30 +306,26 @@ namespace EuroCalculator
             if (VoteNeeded != 0.0)
             {
                 BlockedMinority.Text = "";
-                bool BlockingMinority = false;
                 if (MemberStatesVote.Maximum > 0)
                 {
-                    if (((double)MemberStatesVote.Value / (double)MemberStatesVote.Maximum) * 100 >= VoteNeeded)
+                    if (VoteTypes[VoteType.SelectedIndex].VoteResult(MemberStatesVote.Value, MemberStatesVote.Maximum, VoteNeeded, PopulationVote.Value, PopulationVote.Maximum, PopVoteNeeded, votesNo) == true)
                     {
-                        if (((double)PopulationVote.Value / (double)PopulationVote.Maximum) * 100 < PopVoteNeeded && votesNo > 3)
-                        {
-                            PassedFailed.Text = "Failed";
-                        }
-                        else if (((double)PopulationVote.Value / (double)PopulationVote.Maximum) * 100 < PopVoteNeeded && votesNo <= 3)
-                        {
-                            PassedFailed.Text = "Passed";
-                            BlockedMinority.Text = "Blocking Minority";
-                        }
-                        else
-                        {
-                            PassedFailed.Text = "Passed";
-                        }
-
-
+                        PassedFailed.Text = "Passed";
                     }
                     else
                     {
-                        PassedFailed.Text = "Failed";
+                        PassedFailed.Text = "Rejected";
+                    }
+                }
+                if (PopulationVote.Maximum > 0)
+                {
+                    if (PassedFailed.Text == "Passed" && ((double)PopulationVote.Value / (double)PopulationVote.Maximum) * 100 < PopVoteNeeded)
+                    {
+                        BlockedMinority.Text = "Blocked Minority";
+                    }
+                    else
+                    {
+                        BlockedMinority.Text = "";
                     }
                 }
             }
