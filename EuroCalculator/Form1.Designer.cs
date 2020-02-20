@@ -116,6 +116,7 @@
             // 
             // EurozoneOnly
             // 
+            this.EurozoneOnly.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.EurozoneOnly.AutoSize = true;
             this.EurozoneOnly.Location = new System.Drawing.Point(156, 6);
             this.EurozoneOnly.Name = "EurozoneOnly";
@@ -127,6 +128,7 @@
             // 
             // AllCountries
             // 
+            this.AllCountries.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.AllCountries.AutoSize = true;
             this.AllCountries.Location = new System.Drawing.Point(7, 6);
             this.AllCountries.Name = "AllCountries";
@@ -138,6 +140,7 @@
             // 
             // CountriesList
             // 
+            this.CountriesList.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.CountriesList.BackColor = System.Drawing.SystemColors.MenuText;
             this.CountriesList.CheckOnClick = true;
             this.CountriesList.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
@@ -180,6 +183,7 @@
             // 
             // MemberStatesVote
             // 
+            this.MemberStatesVote.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.MemberStatesVote.Location = new System.Drawing.Point(670, 145);
             this.MemberStatesVote.MarqueeAnimationSpeed = 0;
             this.MemberStatesVote.Maximum = 0;
@@ -190,6 +194,7 @@
             // 
             // AusVote
             // 
+            this.AusVote.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.AusVote.AutoSize = false;
             this.AusVote.LargeChange = 1;
             this.AusVote.Location = new System.Drawing.Point(154, 41);
@@ -202,6 +207,7 @@
             // 
             // BelVote
             // 
+            this.BelVote.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.BelVote.AutoSize = false;
             this.BelVote.LargeChange = 1;
             this.BelVote.Location = new System.Drawing.Point(154, 60);
@@ -214,6 +220,7 @@
             // 
             // CroVote
             // 
+            this.CroVote.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.CroVote.AutoSize = false;
             this.CroVote.LargeChange = 1;
             this.CroVote.Location = new System.Drawing.Point(154, 98);
@@ -226,6 +233,7 @@
             // 
             // BulVote
             // 
+            this.BulVote.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.BulVote.AutoSize = false;
             this.BulVote.LargeChange = 1;
             this.BulVote.Location = new System.Drawing.Point(154, 79);
@@ -238,6 +246,7 @@
             // 
             // EstVote
             // 
+            this.EstVote.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.EstVote.AutoSize = false;
             this.EstVote.LargeChange = 1;
             this.EstVote.Location = new System.Drawing.Point(154, 174);
@@ -250,6 +259,7 @@
             // 
             // DenVote
             // 
+            this.DenVote.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.DenVote.AutoSize = false;
             this.DenVote.LargeChange = 1;
             this.DenVote.Location = new System.Drawing.Point(154, 155);
@@ -262,6 +272,7 @@
             // 
             // CzeVote
             // 
+            this.CzeVote.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.CzeVote.AutoSize = false;
             this.CzeVote.LargeChange = 1;
             this.CzeVote.Location = new System.Drawing.Point(154, 136);
@@ -274,6 +285,7 @@
             // 
             // CypVote
             // 
+            this.CypVote.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.CypVote.AutoSize = false;
             this.CypVote.LargeChange = 1;
             this.CypVote.Location = new System.Drawing.Point(154, 117);
@@ -286,6 +298,7 @@
             // 
             // LatVote
             // 
+            this.LatVote.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.LatVote.AutoSize = false;
             this.LatVote.LargeChange = 1;
             this.LatVote.Location = new System.Drawing.Point(154, 326);
@@ -298,6 +311,7 @@
             // 
             // ItaVote
             // 
+            this.ItaVote.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.ItaVote.AutoSize = false;
             this.ItaVote.LargeChange = 1;
             this.ItaVote.Location = new System.Drawing.Point(154, 307);
@@ -310,6 +324,7 @@
             // 
             // IreVote
             // 
+            this.IreVote.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.IreVote.AutoSize = false;
             this.IreVote.LargeChange = 1;
             this.IreVote.Location = new System.Drawing.Point(154, 288);
@@ -322,6 +337,7 @@
             // 
             // HunVote
             // 
+            this.HunVote.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.HunVote.AutoSize = false;
             this.HunVote.LargeChange = 1;
             this.HunVote.Location = new System.Drawing.Point(154, 269);
@@ -334,6 +350,7 @@
             // 
             // GreVote
             // 
+            this.GreVote.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.GreVote.AutoSize = false;
             this.GreVote.LargeChange = 1;
             this.GreVote.Location = new System.Drawing.Point(154, 250);
@@ -346,6 +363,7 @@
             // 
             // GerVote
             // 
+            this.GerVote.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.GerVote.AutoSize = false;
             this.GerVote.LargeChange = 1;
             this.GerVote.Location = new System.Drawing.Point(154, 231);
@@ -358,6 +376,7 @@
             // 
             // FraVote
             // 
+            this.FraVote.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.FraVote.AutoSize = false;
             this.FraVote.LargeChange = 1;
             this.FraVote.Location = new System.Drawing.Point(154, 212);
@@ -370,6 +389,7 @@
             // 
             // FinVote
             // 
+            this.FinVote.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.FinVote.AutoSize = false;
             this.FinVote.LargeChange = 1;
             this.FinVote.Location = new System.Drawing.Point(154, 193);
@@ -382,6 +402,7 @@
             // 
             // SweVote
             // 
+            this.SweVote.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.SweVote.AutoSize = false;
             this.SweVote.LargeChange = 1;
             this.SweVote.Location = new System.Drawing.Point(154, 535);
@@ -394,6 +415,7 @@
             // 
             // SpaVote
             // 
+            this.SpaVote.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.SpaVote.AutoSize = false;
             this.SpaVote.LargeChange = 1;
             this.SpaVote.Location = new System.Drawing.Point(154, 516);
@@ -406,6 +428,7 @@
             // 
             // SlnVote
             // 
+            this.SlnVote.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.SlnVote.AutoSize = false;
             this.SlnVote.LargeChange = 1;
             this.SlnVote.Location = new System.Drawing.Point(154, 497);
@@ -418,6 +441,7 @@
             // 
             // SlkVote
             // 
+            this.SlkVote.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.SlkVote.AutoSize = false;
             this.SlkVote.LargeChange = 1;
             this.SlkVote.Location = new System.Drawing.Point(154, 478);
@@ -430,6 +454,7 @@
             // 
             // RomVote
             // 
+            this.RomVote.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.RomVote.AutoSize = false;
             this.RomVote.LargeChange = 1;
             this.RomVote.Location = new System.Drawing.Point(154, 459);
@@ -442,6 +467,7 @@
             // 
             // PorVote
             // 
+            this.PorVote.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.PorVote.AutoSize = false;
             this.PorVote.LargeChange = 1;
             this.PorVote.Location = new System.Drawing.Point(154, 440);
@@ -454,6 +480,7 @@
             // 
             // PolVote
             // 
+            this.PolVote.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.PolVote.AutoSize = false;
             this.PolVote.LargeChange = 1;
             this.PolVote.Location = new System.Drawing.Point(154, 421);
@@ -466,6 +493,7 @@
             // 
             // NetVote
             // 
+            this.NetVote.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.NetVote.AutoSize = false;
             this.NetVote.LargeChange = 1;
             this.NetVote.Location = new System.Drawing.Point(154, 402);
@@ -478,6 +506,7 @@
             // 
             // MalVote
             // 
+            this.MalVote.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.MalVote.AutoSize = false;
             this.MalVote.LargeChange = 1;
             this.MalVote.Location = new System.Drawing.Point(154, 383);
@@ -490,6 +519,7 @@
             // 
             // LuxVote
             // 
+            this.LuxVote.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.LuxVote.AutoSize = false;
             this.LuxVote.LargeChange = 1;
             this.LuxVote.Location = new System.Drawing.Point(154, 364);
@@ -502,6 +532,7 @@
             // 
             // LitVote
             // 
+            this.LitVote.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.LitVote.AutoSize = false;
             this.LitVote.LargeChange = 1;
             this.LitVote.Location = new System.Drawing.Point(154, 345);
@@ -514,6 +545,7 @@
             // 
             // ParticipatingStates
             // 
+            this.ParticipatingStates.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.ParticipatingStates.AutoSize = true;
             this.ParticipatingStates.Location = new System.Drawing.Point(667, 129);
             this.ParticipatingStates.Name = "ParticipatingStates";
@@ -523,6 +555,7 @@
             // 
             // label1
             // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(560, 128);
             this.label1.Name = "label1";
@@ -532,6 +565,7 @@
             // 
             // label2
             // 
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(151, 26);
             this.label2.Name = "label2";
@@ -541,6 +575,7 @@
             // 
             // label3
             // 
+            this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(244, 26);
             this.label3.Name = "label3";
@@ -550,6 +585,7 @@
             // 
             // label4
             // 
+            this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(332, 26);
             this.label4.Name = "label4";
@@ -559,6 +595,7 @@
             // 
             // VoteType
             // 
+            this.VoteType.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.VoteType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.VoteType.FormattingEnabled = true;
             this.VoteType.Items.AddRange(new object[] {
@@ -574,6 +611,7 @@
             // 
             // CountriesYes
             // 
+            this.CountriesYes.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.CountriesYes.AutoSize = true;
             this.CountriesYes.Location = new System.Drawing.Point(667, 198);
             this.CountriesYes.Name = "CountriesYes";
@@ -583,6 +621,7 @@
             // 
             // CountriesNo
             // 
+            this.CountriesNo.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.CountriesNo.AutoSize = true;
             this.CountriesNo.Location = new System.Drawing.Point(709, 198);
             this.CountriesNo.Name = "CountriesNo";
@@ -592,6 +631,7 @@
             // 
             // CountriesAbstain
             // 
+            this.CountriesAbstain.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.CountriesAbstain.AutoSize = true;
             this.CountriesAbstain.Location = new System.Drawing.Point(749, 198);
             this.CountriesAbstain.Name = "CountriesAbstain";
@@ -601,6 +641,7 @@
             // 
             // VoteYesNumber
             // 
+            this.VoteYesNumber.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.VoteYesNumber.AutoSize = true;
             this.VoteYesNumber.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.VoteYesNumber.Location = new System.Drawing.Point(670, 175);
@@ -611,6 +652,7 @@
             // 
             // VoteNoNumber
             // 
+            this.VoteNoNumber.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.VoteNoNumber.AutoSize = true;
             this.VoteNoNumber.ForeColor = System.Drawing.Color.Red;
             this.VoteNoNumber.Location = new System.Drawing.Point(713, 175);
@@ -621,6 +663,7 @@
             // 
             // VoteAbstainNumber
             // 
+            this.VoteAbstainNumber.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.VoteAbstainNumber.AutoSize = true;
             this.VoteAbstainNumber.Location = new System.Drawing.Point(762, 175);
             this.VoteAbstainNumber.Name = "VoteAbstainNumber";
@@ -630,6 +673,7 @@
             // 
             // PassedFailed
             // 
+            this.PassedFailed.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.PassedFailed.AutoSize = true;
             this.PassedFailed.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F);
             this.PassedFailed.Location = new System.Drawing.Point(674, 48);
@@ -640,6 +684,7 @@
             // 
             // label5
             // 
+            this.label5.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(523, 15);
             this.label5.Name = "label5";
@@ -649,6 +694,7 @@
             // 
             // label6
             // 
+            this.label6.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label6.AutoSize = true;
             this.label6.Location = new System.Drawing.Point(576, 98);
             this.label6.Name = "label6";
@@ -658,6 +704,7 @@
             // 
             // label7
             // 
+            this.label7.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label7.AutoSize = true;
             this.label7.Location = new System.Drawing.Point(556, 111);
             this.label7.Name = "label7";
@@ -667,6 +714,7 @@
             // 
             // CVoteNeeded
             // 
+            this.CVoteNeeded.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.CVoteNeeded.AutoSize = true;
             this.CVoteNeeded.Location = new System.Drawing.Point(698, 98);
             this.CVoteNeeded.Name = "CVoteNeeded";
@@ -676,6 +724,7 @@
             // 
             // PVoteNeeded
             // 
+            this.PVoteNeeded.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.PVoteNeeded.AutoSize = true;
             this.PVoteNeeded.Location = new System.Drawing.Point(698, 111);
             this.PVoteNeeded.Name = "PVoteNeeded";
@@ -685,6 +734,7 @@
             // 
             // PopulationVote
             // 
+            this.PopulationVote.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.PopulationVote.Location = new System.Drawing.Point(670, 231);
             this.PopulationVote.MarqueeAnimationSpeed = 0;
             this.PopulationVote.Maximum = 0;
@@ -695,6 +745,7 @@
             // 
             // PopVoteYesNumber
             // 
+            this.PopVoteYesNumber.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.PopVoteYesNumber.AutoSize = true;
             this.PopVoteYesNumber.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.PopVoteYesNumber.Location = new System.Drawing.Point(670, 269);
@@ -705,6 +756,7 @@
             // 
             // PopVoteNoNumber
             // 
+            this.PopVoteNoNumber.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.PopVoteNoNumber.AutoSize = true;
             this.PopVoteNoNumber.ForeColor = System.Drawing.Color.Red;
             this.PopVoteNoNumber.Location = new System.Drawing.Point(713, 269);
@@ -715,6 +767,7 @@
             // 
             // PopVoteAbstainNumber
             // 
+            this.PopVoteAbstainNumber.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.PopVoteAbstainNumber.AutoSize = true;
             this.PopVoteAbstainNumber.Location = new System.Drawing.Point(762, 269);
             this.PopVoteAbstainNumber.Name = "PopVoteAbstainNumber";
@@ -724,6 +777,7 @@
             // 
             // label11
             // 
+            this.label11.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label11.AutoSize = true;
             this.label11.Location = new System.Drawing.Point(667, 293);
             this.label11.Name = "label11";
@@ -733,6 +787,7 @@
             // 
             // label12
             // 
+            this.label12.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label12.AutoSize = true;
             this.label12.Location = new System.Drawing.Point(709, 293);
             this.label12.Name = "label12";
@@ -742,6 +797,7 @@
             // 
             // label13
             // 
+            this.label13.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label13.AutoSize = true;
             this.label13.Location = new System.Drawing.Point(749, 293);
             this.label13.Name = "label13";
@@ -751,6 +807,7 @@
             // 
             // BlockedMinority
             // 
+            this.BlockedMinority.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.BlockedMinority.AutoSize = true;
             this.BlockedMinority.Location = new System.Drawing.Point(670, 326);
             this.BlockedMinority.Name = "BlockedMinority";
@@ -759,8 +816,9 @@
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
+            this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(806, 560);
             this.Controls.Add(this.BlockedMinority);
